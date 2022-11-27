@@ -22,5 +22,11 @@ namespace PotionsPlease.InGame
         {
         
         }
+
+        public List<ItemModel> getNeeded()
+        {
+            return _model.getNeeded();
+
+        }
     }
 }

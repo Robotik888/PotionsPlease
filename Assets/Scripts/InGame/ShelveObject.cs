@@ -1,6 +1,7 @@
 using PotionsPlease.Models;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 namespace PotionsPlease.InGame
@@ -9,16 +10,11 @@ namespace PotionsPlease.InGame
     {
         [SerializeField] private Transform _shelve;
         [SerializeField] private int _size;
-        [SerializeField] private ItemObject _itemObjectPrefab;
+        [SerializeField] private ReadOnlyCollection<ItemObject> _itemObjectPrefabs;
         // Start is called before the first frame update
         void Start()
         {
-            List<float> positions = GetPositions();
-            float y = _shelve.position.y;
-            for (int i = 0; i < _size; i++)
-            {
-                Instantiate(_itemObjectPrefab, new Vector3(positions[i], y, 0), new Quaternion());
-            }
+            fillShelves();
         }
 
         private List<float> GetPositions() {
@@ -40,6 +36,20 @@ namespace PotionsPlease.InGame
             return positions;
 
         } 
+        public void fillObjects(ReadOnlyCollection<ItemObject> collection)
+        {
+            _itemObjectPrefabs = collection;
+            _size = _itemObjectPrefabs.Count;
+        } 
 
+        public void fillShelves()
+        {
+            List<float> positions = GetPositions();
+            float y = _shelve.position.y;
+            for (int i = 0; i < _itemObjectPrefabs.Count; i++)
+            {
+                Instantiate(_itemObjectPrefabs[i], new Vector3(positions[i], y, 0), new Quaternion());
+            }
+        }
     }
 }
