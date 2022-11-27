@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: Potion_Strength
   m_EditorClassIdentifier: 
   _name: Strength Potion
-  _recipe: []
+  _recipe:
+  - _itemModel: {fileID: 11400000, guid: 59f456e1f9b6da246a8dc677cdfd551b, type: 2}
+    _effectivity: 0
+  - _itemModel: {fileID: 11400000, guid: 06eae39d7e4b13a4388c8677c898c41b, type: 2}
+    _effectivity: 0
