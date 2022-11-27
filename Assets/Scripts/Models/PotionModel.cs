@@ -38,5 +38,15 @@ namespace PotionsPlease.Models
 
             ///vypocet efektivity
         }
+
+        public List<ItemModel> getNeeded()
+        {
+            List<ItemModel> items = new List<ItemModel>();
+            foreach (ItemPrisada ingredient in _recipe)
+            {
+                items.Add(ingredient.ItemModel);
+            }
+            return items;
+        }
     }
 }

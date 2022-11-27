@@ -127,5 +127,11 @@ namespace PotionsPlease.InGame
 
             Gizmos.DrawLine(new Vector2(-50, _dropBorderY), new Vector2(50, _dropBorderY));
         }
+        public ItemModel getModel()
+        {
+            return _model;
+        }
     }
+
+
 }

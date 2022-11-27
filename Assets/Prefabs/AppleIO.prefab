@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2345293308554071833}
   - component: {fileID: 2345293308554071839}
   m_Layer: 0
-  m_Name: ItemObject
+  m_Name: AppleIO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 1018ba1cad9c69041bee1341ab6a3f34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c80fc2bf14fec2b4f8fe9911d1c6bf2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722c23cd03146aa4d93b1c9cd7419820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _model: {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
+  _model: {fileID: 11400000, guid: ce1fba7fd1658de489e4d8b5b1a494c6, type: 2}
   _dropBorderY: 1.31
   _fallingGravity: 40
   _fallingMaxSpeed: 15
