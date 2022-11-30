@@ -12,12 +12,7 @@ namespace PotionsPlease.InGame
 
         private void Update()
         {
-            //_rectTransform.sizeDelta = _chatText.bounds.extents;//.textBounds.extents;
-            _rectTransform.sizeDelta = _chatText.GetRenderedValues(true);
-            _rectTransform.sizeDelta = _chatText.GetPreferredValues(true);
-
             _bounds = _chatText.textBounds;
-
         }
 
         private void OnValidate()

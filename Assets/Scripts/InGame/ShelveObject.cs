@@ -1,7 +1,6 @@
 using PotionsPlease.Models;
 using System.Collections.ObjectModel;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 namespace PotionsPlease.InGame
 {
