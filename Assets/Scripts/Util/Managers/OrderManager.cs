@@ -1,93 +1,80 @@
 using PotionsPlease.InGame;
 using PotionsPlease.Models;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Linq;
 using UnityEngine;
 
 namespace PotionsPlease.Util.Managers
 {
-    public class OrderManager : MonoBehaviour
+    public class OrderManager : ManagerBase<OrderManager>
     {
-        [SerializeField] public List<PotionObject> potions;
-        private PotionObject _currentPotion;
-        [SerializeField] public List<ItemObject> ingredients;
-        [SerializeField] public List<ShelveObject> shelves;
-        [SerializeField] public int shelveMax;
+        public PotionModel PotionCurrent { get; private set; }
 
-        private void Awake()
+        /// Temporary solution for holding all item and potion models; probably will be changed later to load from resources
+        [SerializeField] private ItemModel[] _itemsAll;       
+        [SerializeField] private PotionModel[] _potionsAll;
+
+        [Space]
+        [SerializeField] private ShelveObject[] _shelves;
+
+        private void Start()
         {
-            newPotion();
-            storeItems();
+            NextOrder();
         }
 
-
-        // Start is called before the first frame update
-        void Start()
+        private void Update()
         {
-
+            if (Input.GetKeyDown(KeyCode.C))
+                NextOrder();
         }
 
-        private void newPotion()
+        public void NextOrder()
         {
-            int potionIndex = Random.Range(0, potions.Count);
-            _currentPotion = potions[potionIndex];
+            int randomPotionIndex = Random.Range(0, _potionsAll.Length);
+
+            PotionCurrent = _potionsAll[randomPotionIndex];
+            UIManager.Instance.RecipeInfoPanel.SetPotion(PotionCurrent);
+
+            GenerateItems();
         }
 
-        public void storeItems()
+        public void EndOrder(ItemModel[] items)
         {
-            ReadOnlyCollection<ItemObject> items = getItems();
-            shelves[0].fillObjects(items);
-            shelves[1].fillObjects((new List<ItemObject>()).AsReadOnly());
+            PotionManager.Instance.NewPotion(items);
+
+            for (int i = 0; i < _shelves.Length; i++)
+                _shelves[i].SetItemsInactive();
         }
 
-        public ReadOnlyCollection<ItemObject> getItems()
+        private void GenerateItems()
         {
-            int maxCount = shelveMax * shelves.Count;
-            if (maxCount > ingredients.Count)
+            var requiredItems = PotionCurrent.GetRecipeItemModels();
+            var itemsToGenerate = _shelves.Sum(e => e.Size) - requiredItems.Length;
+
+            var itemPool = _itemsAll.Except(requiredItems).ToList();
+            var generatedItems = new List<ItemModel>(requiredItems);
+
+            while (itemsToGenerate != 0)
             {
-                return ingredients.AsReadOnly();
-            }
-            List<ItemObject> toShelves = new List<ItemObject>();
-            List<ItemModel> models =_currentPotion.getNeeded();
-            foreach (ItemModel model in models)
-            {
-                foreach (ItemObject itemObject in ingredients)
-                {
-                    if (itemObject.getModel() == model)
-                    {
-                        toShelves.Add(itemObject);
-                    }
-                }
-            }
-            return returnList(toShelves);
-        }
+                var randomItemIndex = Random.Range(0, itemPool.Count);
 
-        private ReadOnlyCollection<ItemObject> returnList(List<ItemObject> toShelves)
-        {
-            List<ItemObject> toReturn = new List<ItemObject>();
-            while (toShelves.Count != 0)
-            {
-                int random = Random.Range(0, toShelves.Count - 1);
-                toReturn.Add(toShelves[random]);
-                toShelves.RemoveAt(random);
+                generatedItems.Add(itemPool[randomItemIndex]);
 
-            }
-            return toReturn.AsReadOnly();
-        }
+                if (itemPool.Count > 1) /// Temporary solution for not running out of items in pool
+                    itemPool.RemoveAt(randomItemIndex);
 
-        // Update is called once per frame
-        void Update()
-        {
-            if (Input.GetKeyDown("c"))
-            {
-                newPotion();
-                storeItems();
-                foreach(ShelveObject shelve in shelves)
-                {
-                    shelve.fillShelves();
-                }
+                itemsToGenerate--;
             }
+
+            for (int i = 0; i < _shelves.Length; i++)
+            {
+                var currentShelve = _shelves[i];
+
+                currentShelve.SetItems(generatedItems.Take(currentShelve.Size).ToArray());
+                generatedItems.RemoveRange(0, currentShelve.Size);
+            }
+
+            Debug.Assert(generatedItems.Count == 0, "Item generating for shelves is not working properly.");
         }
     }
 }

@@ -1,6 +1,10 @@
 using PotionsPlease.Models;
+using PotionsPlease.Util.Managers;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 
 namespace PotionsPlease.InGame
 {
@@ -11,9 +15,18 @@ namespace PotionsPlease.InGame
         [Header("Components")]
         [SerializeField] private ParticleSystem _dropParticleSystem;
 
-        public void AddItem(ItemModel item)
+
+        public void AddItem(ItemModel itemModel)
         {
-            _items.Add(item);
+            UIManager.Instance.RecipeInfoPanel.OnItemAddedToCauldron(itemModel);
+            _items.Add(itemModel);
+
+            if (_items.Count == 2)
+            {
+                OrderManager.Instance.EndOrder(_items.ToArray());
+                _items.Clear();
+            }
+
             _dropParticleSystem.Play();
         }
     }

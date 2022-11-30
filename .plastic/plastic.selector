@@ -1,4 +1,0 @@
-repository "PotionsPlease@GDI_Team@cloud"
-  path "/"
-    br "/main"
-    co "/main"

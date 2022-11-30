@@ -1,6 +1,5 @@
+using PotionsPlease.Models;
 using PotionsPlease.Util;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,24 +7,16 @@ namespace PotionsPlease.InGame
 {
     public class UIManager : ManagerBase<UIManager>
     {
-        [SerializeField] public TextMeshProUGUI label;
-        [SerializeField] public TextMeshProUGUI description;
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [SerializeField] public TMP_Text _itemInfoHeaderText;
+        [SerializeField] public TMP_Text _itemInfoDescText;
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+        [field: Space]
+        [field: SerializeField] public RecipeInfoPanel RecipeInfoPanel { get; private set; }
 
-        public void changeTexts(string label, string description)
+        public void SetItemInfoText(ItemModel itemModel)
         {
-            this.label.text = label;
-            this.description.text = description;
+            _itemInfoHeaderText.text = itemModel.Name;
+            _itemInfoDescText.text = itemModel.Description;
         }
 
     }

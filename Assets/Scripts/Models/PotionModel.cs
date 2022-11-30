@@ -9,44 +9,19 @@ namespace PotionsPlease.Models
     public class PotionModel : ScriptableObject
     {
         [System.Serializable]
-        private class ItemPrisada
+        private class Ingredient
         {
-            public ItemModel ItemModel => _itemModel;
-            public float Effectivity => _effectivity;
-
-            [SerializeField] private ItemModel _itemModel;
-            [SerializeField, Range(0, 1)] private float _effectivity;
+            [field: SerializeField] public ItemModel ItemModel { get; private set; }
+            [field: SerializeField, Range(0, 1)] public float Effectivity { get; private set; } 
 
         }
+
+        public string Name => _name;
 
         [SerializeField] private string _name;
-        [SerializeField] private ItemPrisada[] _recipe;
+        [SerializeField] private Ingredient[] _recipe;
 
-        private float _effectivity;
 
-        public void AddItemToRecipe(ItemModel item)
-        {
-            float currentItemEffectivity = 0;
-
-            for (int i = 0; i < _recipe.Length; i++)
-            {
-                if (item.name == _recipe[i].ItemModel.Name)
-                {
-                    currentItemEffectivity = _recipe[i].Effectivity;
-                }
-            }
-
-            ///vypocet efektivity
-        }
-
-        public List<ItemModel> getNeeded()
-        {
-            List<ItemModel> items = new List<ItemModel>();
-            foreach (ItemPrisada ingredient in _recipe)
-            {
-                items.Add(ingredient.ItemModel);
-            }
-            return items;
-        }
+        public ItemModel[] GetRecipeItemModels() => _recipe.Select(e => e.ItemModel).ToArray();
     }
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using PotionsPlease.Models;
 using PotionsPlease.Util.Managers;
+using TMPro;
 
 namespace PotionsPlease.InGame
 {
@@ -11,13 +12,14 @@ namespace PotionsPlease.InGame
         {
             Idle,
             Drag,
-            Fall
+            Fall,
+            InCauldron, /// Invisible, undraggable
+            Inactive
         }
-
-        [SerializeField] private ItemModel _model;
+        public ItemModel ItemModel { get; private set; }
+        private bool IsDraggable => _state != ItemObjectState.Fall && _state != ItemObjectState.InCauldron && _state != ItemObjectState.Inactive;
 
         [Header("Drop to cauldron")]
-        [SerializeField] private float _dropBorderY;
         [SerializeField] private float _fallingGravity;
         [SerializeField] private float _fallingMaxSpeed;
         [SerializeField] private float _fallingRotateFactor;
@@ -41,15 +43,13 @@ namespace PotionsPlease.InGame
         [Header("Components")]
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
-        private Vector3 _startPos;
-
+        [SerializeField, HideInInspector] private Vector3 _shelfPos;
         private ItemObjectState _state = ItemObjectState.Idle;
 
-        private void Start()
+        public void Initialize(Vector2 shelfPos)
         {
-            _startPos = transform.position;
-            _spriteRenderer.sprite = _model.Sprite;
-
+            _shelfPos = shelfPos;
+            transform.position = _shelfPos;
         }
 
         private void Update()
@@ -58,7 +58,7 @@ namespace PotionsPlease.InGame
             {
                 case ItemObjectState.Idle:
                     DragEffect(_shelfColor, _shelfScale, 0);
-                    transform.position = Vector3.Lerp(transform.position, _startPos, _returnLerpTime * Time.deltaTime);
+                    transform.position = Vector3.Lerp(transform.position, _shelfPos, _returnLerpTime * Time.deltaTime);
                     break;
                 case ItemObjectState.Drag:
                     DragEffect(_dragColor, _dragScale, _dragRotInitial + Mathf.Sin(Time.time * _dragRotSwaySpeed) * _dragRotSwayAmplitude);
@@ -68,6 +68,12 @@ namespace PotionsPlease.InGame
                     transform.position -= Vector3.up * _fallingSpeed * Time.deltaTime;
                     transform.rotation *= Quaternion.Euler(0, 0, _fallingSpeed * _fallingRotateFactor * _fallingRotateDir * Time.deltaTime);
                     break;
+                case ItemObjectState.InCauldron:
+                    break;
+                case ItemObjectState.Inactive:
+                    DragEffect(_shelfColor, _shelfScale, 0);
+                    transform.position = Vector3.Lerp(transform.position, _shelfPos, _returnLerpTime * Time.deltaTime);
+                    break;
             }
         }
 
@@ -75,14 +81,15 @@ namespace PotionsPlease.InGame
         {
             if (_state == ItemObjectState.Fall && collision.gameObject.CompareTag(Constants.Tags.CAULDRON))
             {
-                Destroy(gameObject);
-                GameManager.Instance.Cauldron.AddItem(_model);
+                _spriteRenderer.color = _spriteRenderer.color.SetA(0);
+                _state = ItemObjectState.InCauldron;
+                GameManager.Instance.Cauldron.AddItem(ItemModel);
             }
         }
 
         private void OnMouseDrag()
         {
-            if (_state == ItemObjectState.Fall)
+            if (!IsDraggable)
                 return;
 
             _state = ItemObjectState.Drag;
@@ -90,13 +97,11 @@ namespace PotionsPlease.InGame
             transform.position = mouseWorldPos;
 
             GameManager.Instance.DraggedItemCurrent = this;
-
-            UIManager.Instance.changeTexts(_model.Name, _model.Description);
         }
 
         private void OnMouseUp()
         {
-            if (_state == ItemObjectState.Fall)
+            if (!IsDraggable)
                 return;
 
             GameManager.Instance.DraggedItemCurrent = null;
@@ -114,24 +119,38 @@ namespace PotionsPlease.InGame
             }
         }
 
+        private void OnMouseDown()
+        {
+            if (!IsDraggable)
+                return;
+
+            UIManager.Instance.SetItemInfoText(ItemModel);
+        }
+
+        public void ResetState(ItemModel itemModel)
+        {
+            ItemModel = itemModel;
+            _spriteRenderer.sprite = itemModel.Sprite;
+            _state = ItemObjectState.Idle;
+            transform.SetPositionAndRotation(_shelfPos, Quaternion.identity);
+            transform.localScale = Vector3.one * _shelfScale;
+            _fallingSpeed = 0;
+        }
+
+
+        public void SetIncactive()
+        {
+            if (_state == ItemObjectState.InCauldron)
+                return;
+
+            _state = ItemObjectState.Inactive;
+        }
+
         private void DragEffect(Color targetColor, float targetScale, float targetRotation)
         {
             transform.localScale = Vector2.one * Mathf.Lerp(transform.localScale.x, targetScale, _dragScaleLerpTime * Time.deltaTime);
             _spriteRenderer.color = targetColor;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, targetRotation), _dragRotLerpTime * Time.deltaTime);
         }
-
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.red;
-
-            Gizmos.DrawLine(new Vector2(-50, _dropBorderY), new Vector2(50, _dropBorderY));
-        }
-        public ItemModel getModel()
-        {
-            return _model;
-        }
     }
-
-
 }

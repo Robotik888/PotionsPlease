@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af33c1e09ebf7c5419a070b14994954b, type: 3}
   m_Name: Potion_Poison
   m_EditorClassIdentifier: 
-  _name: Poision Potion
+  _name: Poison Potion
   _recipe:
-  - _itemModel: {fileID: 11400000, guid: b046fd62de0b9b941928a4aa2aac467c, type: 2}
-    _effectivity: 0.504
-  - _itemModel: {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
-    _effectivity: 0.504
+  - <ItemModel>k__BackingField: {fileID: 11400000, guid: b046fd62de0b9b941928a4aa2aac467c, type: 2}
+    <Effectivity>k__BackingField: 1
+  - <ItemModel>k__BackingField: {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
+    <Effectivity>k__BackingField: 1

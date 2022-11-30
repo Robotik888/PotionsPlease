@@ -1,55 +1,56 @@
 using PotionsPlease.Models;
-using System.Collections;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 namespace PotionsPlease.InGame
 {
+    [SelectionBase]
     public class ShelveObject : MonoBehaviour
     {
-        [SerializeField] private Transform _shelve;
-        [SerializeField] private int _size;
-        [SerializeField] private ReadOnlyCollection<ItemObject> _itemObjectPrefabs;
-        // Start is called before the first frame update
-        void Start()
-        {
-            fillShelves();
-        }
+        public int Size => _size;
+        public ItemObject ItemObjectPrefab => _itemObjectPrefab;
+        
+        [field: SerializeField] public ItemObject[] ItemObjects { get; set; }
 
-        private List<float> GetPositions() {
-            List<float> positions = new List<float>();
-            float minimalX = _shelve.position.x - _shelve.localScale.x / 2.0f + 0.3f;
-            float maximalX = _shelve.position.x + _shelve.localScale.x / 2.0f - 0.3f;
-            float shift = (maximalX - minimalX) / (_size - 1);
-            float position = minimalX;
+        [SerializeField] private float _edgeOffset;
+        [SerializeField, Range(0, 10)] private int _size;
+        [SerializeField] private ReadOnlyCollection<ItemObject> _itemObjectPrefabs;
+
+        [Space]
+        [SerializeField] private Transform _shelve;
+        [SerializeField] private ItemObject _itemObjectPrefab;
+
+        public Vector2[] GetItemObjectPositions() 
+        {
+            Vector2[] positions = new Vector2[_size];
+
+            float minX = _shelve.position.x - _shelve.localScale.x / 2.0f + _edgeOffset;
+            float maxX = _shelve.position.x + _shelve.localScale.x / 2.0f - _edgeOffset;
+            float shift = (maxX - minX) / (_size - 1);
+            float xPos = minX;
 
             for(int i = 0; i < _size; i++)
             {
-                positions.Add(position);
-                Debug.Log(position);
-                position += shift;
-
+                positions[i] = transform.position.SetX(xPos);
+                xPos += shift;
             }
-
 
             return positions;
+        }
 
-        } 
-        public void fillObjects(ReadOnlyCollection<ItemObject> collection)
+        public void SetItems(ItemModel[] items)
         {
-            _itemObjectPrefabs = collection;
-            _size = _itemObjectPrefabs.Count;
-        } 
+            Debug.Assert(items.Length == ItemObjects.Length, "Item model count must match item object count!");
 
-        public void fillShelves()
+            for (int i = 0; i < items.Length; i++) 
+                ItemObjects[i].ResetState(items[i]);
+        }
+
+        public void SetItemsInactive()
         {
-            List<float> positions = GetPositions();
-            float y = _shelve.position.y;
-            for (int i = 0; i < _itemObjectPrefabs.Count; i++)
-            {
-                Instantiate(_itemObjectPrefabs[i], new Vector3(positions[i], y, 0), new Quaternion());
-            }
+            for (int i = 0; i < ItemObjects.Length; i++)
+                ItemObjects[i].SetIncactive();
         }
     }
 }

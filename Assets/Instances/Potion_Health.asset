@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Health Potion
   _recipe:
-  - _itemModel: {fileID: 11400000, guid: ce1fba7fd1658de489e4d8b5b1a494c6, type: 2}
-    _effectivity: 1
-  - _itemModel: {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
-    _effectivity: 0.8
+  - <ItemModel>k__BackingField: {fileID: 11400000, guid: ce1fba7fd1658de489e4d8b5b1a494c6, type: 2}
+    <Effectivity>k__BackingField: 1
+  - <ItemModel>k__BackingField: {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
+    <Effectivity>k__BackingField: 1
