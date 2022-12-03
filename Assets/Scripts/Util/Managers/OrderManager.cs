@@ -11,10 +11,12 @@ namespace PotionsPlease.Util.Managers
         public PotionModel PotionCurrent { get; private set; }
 
         /// Temporary solution for holding all item and potion models; probably will be changed later to load from resources
-        [SerializeField] private object/*LevelModel*/ _currentLevel;
+        [SerializeField] private LevelModel _currentLevel;
 
         [SerializeField] private ItemModel[] _itemsAll;       
         [SerializeField] private PotionModel[] _potionsAll;
+
+        [SerializeField] private int orderIndex = -1;
 
 
 
@@ -34,9 +36,15 @@ namespace PotionsPlease.Util.Managers
 
         public void NextOrder()
         {
-            int randomPotionIndex = Random.Range(0, _potionsAll.Length);
-
-            PotionCurrent = _potionsAll[randomPotionIndex];
+ 
+            if (orderIndex == _currentLevel.Orders.Count - 1) // Temporary solution
+            {
+                orderIndex = 0;
+            } else
+            {
+                orderIndex += 1;
+            }
+            PotionCurrent = _currentLevel.Orders[orderIndex].Potion;
             UIManager.Instance.RecipeInfoPanel.SetPotion(PotionCurrent);
 
             GenerateItems();
