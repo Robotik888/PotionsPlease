@@ -18,3 +18,7 @@ MonoBehaviour:
     <Effectivity>k__BackingField: 1
   - <ItemModel>k__BackingField: {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
     <Effectivity>k__BackingField: 1
+  _ingredient:
+    <ItemModel>k__BackingField: {fileID: 0}
+    <Effectivity>k__BackingField: 0.247
+  _object: {fileID: 0}

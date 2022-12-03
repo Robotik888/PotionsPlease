@@ -11,8 +11,12 @@ namespace PotionsPlease.Util.Managers
         public PotionModel PotionCurrent { get; private set; }
 
         /// Temporary solution for holding all item and potion models; probably will be changed later to load from resources
+        [SerializeField] private object/*LevelModel*/ _currentLevel;
+
         [SerializeField] private ItemModel[] _itemsAll;       
         [SerializeField] private PotionModel[] _potionsAll;
+
+
 
         [Space]
         [SerializeField] private ShelveObject[] _shelves;

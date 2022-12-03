@@ -20,6 +20,8 @@ namespace PotionsPlease.Models
 
         [SerializeField] private string _name;
         [SerializeField] private Ingredient[] _recipe;
+        [SerializeField] private Ingredient _ingredient;
+        [SerializeField] private Object _object;
 
 
         public ItemModel[] GetRecipeItemModels() => _recipe.Select(e => e.ItemModel).ToArray();
