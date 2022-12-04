@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Innkeeper Betty
   <Lore>k__BackingField: The lady that runs the local tavern.
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: a024985125f2d004f9f52afe96c9578d, type: 3}

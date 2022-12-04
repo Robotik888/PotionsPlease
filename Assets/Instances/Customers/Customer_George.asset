@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6468781507b859b43aa156b7a81c3120, type: 3}
   m_Name: Customer_George
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
-  <Lore>k__BackingField: 
-  <Sprite>k__BackingField: {fileID: 0}
+  <Name>k__BackingField: George Mackenzie
+  <Lore>k__BackingField: An old man from a farm. He dreams of being young again.
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 35ef69d20d3ea4e4c8621392f8dc3b5c, type: 3}
