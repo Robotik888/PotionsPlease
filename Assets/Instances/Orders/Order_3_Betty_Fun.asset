@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_3_Betty_Fun
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 902843122d6943f45ace14dc54e5ca78, type: 2}
+  <PotionName>k__BackingField: Potion of fun
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: f5d44911688216144ad9f3f4809b046f, type: 2}
+  - {fileID: 11400000, guid: f735b65cfa5d101449eca53704917e4c, type: 2}
+  - {fileID: 11400000, guid: db4dcee299e816f4b955fa8bbf7e33cc, type: 2}
+  <MessagesOrder>k__BackingField:
+  - There have been a few buzzkills in my tavern lately.
+  - Can you please make me someting I can mix in their drinks so they're not that
+    grumpy anymore?
+  - Something that adds some fun to their minds.
+  <MessagesGoodResponse>k__BackingField:
+  - Thanks, everyone is laughing having so much fun now!
+  <MessagesMehResponse>k__BackingField:
+  - At the very least, the number of complainants from those buzzkills has decreased.
+  - But they still seem grumpy most the time.
+  <MessagesBadResponse>k__BackingField:
+  - This made them even angrier than ever before!

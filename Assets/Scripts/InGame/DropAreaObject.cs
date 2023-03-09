@@ -58,7 +58,12 @@ namespace PotionsPlease.InGame
 
             if (draggedItem != null)
             {
-                IsItemHover = _innerRectShape.GetWorldBounds().Contains(draggedItem.transform.position);
+                var bounds = _innerRectShape.GetWorldBounds();
+
+                /// Set tolerance when hovered over the area (players tends to do that)
+                bounds.min -= Vector3.up;
+
+                IsItemHover = bounds.Contains(draggedItem.transform.position - Vector3.up * draggedItem.DragOffsetY);
 
                 _targetAlpha = IsItemHover ? _dragHoverAlpha : _dragAlpha;
             }
@@ -83,6 +88,17 @@ namespace PotionsPlease.InGame
         {
             _shapeGroup.Color = _shapeGroup.Color.SetA(_alpha);
             _canvasGroup.alpha = _alpha;
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+
+            Gizmos.color = Color.green;
+            var bounds = _innerRectShape.GetWorldBounds();
+            
+            bounds.min -= Vector3.up;
+
+            Gizmos.DrawWireCube(bounds.center, bounds.size);
         }
     }
 }

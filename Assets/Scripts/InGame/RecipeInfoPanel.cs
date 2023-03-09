@@ -17,7 +17,7 @@ namespace PotionsPlease.InGame
 
         public void SetPotion(PotionModel potionModel)
         {
-            var recipe = potionModel.GetRecipeItemModels();
+            var recipe = potionModel.Recipe;
             _recipeHeaderText.text = potionModel.Name;
             _recipeImageDict.Clear();
 

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_1_Liam_Poison
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 284a43c231e19cc4abde6959766d1afd, type: 2}
+  <PotionName>k__BackingField: Poison
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 59f456e1f9b6da246a8dc677cdfd551b, type: 2}
+  - {fileID: 11400000, guid: e9cca5b04a24f0f4ab683c7da078b791, type: 2}
+  - {fileID: 11400000, guid: 4adcb024e5bbf184899f0f3ffbc0dbc7, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
+  <MessagesOrder>k__BackingField:
+  - My kitchen is ruined.
+  - Those dams rats, they are all over the place!
+  - Can you make me a poison so I can get rid of them?
+  <MessagesGoodResponse>k__BackingField:
+  - "Perfect!\t \t\t \t\t \t\t"
+  - My kitchen feels like a home again.
+  <MessagesMehResponse>k__BackingField:
+  - Some rats died and some moved to my neighbour..
+  - But there are still few of them running around in my kitchen
+  <MessagesBadResponse>k__BackingField:
+  - Are you kidding me?
+  - I wanted get rid them, but this thing turned them into rats on steroids!

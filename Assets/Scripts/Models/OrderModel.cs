@@ -8,15 +8,17 @@ namespace PotionsPlease.Models
     public class OrderModel : ScriptableObject
     {
         [field: SerializeField] public string Name { get; private set; }
-
-        [field: SerializeField] public PotionModel Potion { get; private set; }
         [field: SerializeField] public CustomerModel Customer { get; private set; }
 
-        //[field: SerializeField] public PotionsPlease.Util.DialogHolder Dialog { get; private set; }  // MAYBE IN FUTURE TODO
+        [field: Space]
+        [field: SerializeField] public string PotionName { get; private set; }
+        [field: SerializeField] public ItemModel[] PotionIngredients { get; private set; }
+        [field: SerializeField] public ItemModel[] BannedIngredients { get; private set; }
 
-        [field: SerializeField, Multiline] public string OrderLine { get; private set; }
-        [field: SerializeField, Multiline] public string GoodResponse { get; private set; }
-        [field: SerializeField, Multiline] public string MehResponse { get; private set; }
-        [field: SerializeField, Multiline] public string BadResponse { get; private set; }
+        [field: Space]
+        [field: SerializeField] public string[] MessagesOrder { get; private set; }
+        [field: SerializeField] public string[] MessagesGoodResponse { get; private set; }
+        [field: SerializeField] public string[] MessagesMehResponse { get; private set; }
+        [field: SerializeField] public string[] MessagesBadResponse { get; private set; }
     }
 }

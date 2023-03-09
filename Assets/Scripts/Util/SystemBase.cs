@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PotionsPlease.Util.Helpers
+namespace PotionsPlease.Util
 {
-    [System.Diagnostics.DebuggerStepThrough]
-    public abstract class SystemBase<T> : ManagerBase<T> where T : SystemBase<T>
+    //[System.Diagnostics.DebuggerStepThrough]
+    public abstract class SystemBase<T> : MonoBehaviour where T : SystemBase<T>
     {
-        protected override void Awake()
+        public static T Instance { get; private set; }
+
+        protected virtual void Awake()
         {
             if (Instance)
             {
                 Destroy(gameObject);
                 return;
             }
-
-            base.Awake();
-
+        
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
+            Instance = transform.GetComponent<T>();
         }
     }
 }

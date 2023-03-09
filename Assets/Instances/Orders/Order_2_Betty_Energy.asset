@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_2_Betty_Energy
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 902843122d6943f45ace14dc54e5ca78, type: 2}
+  <PotionName>k__BackingField: Potion of energy
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: a378c941514505849ada94845b1ec06c, type: 2}
+  - {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
+  - {fileID: 11400000, guid: 2ca520c54bbad424ebcc96226948db14, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
+  - {fileID: 11400000, guid: 6eb72117538f2cc4099e32dcb3e30f51, type: 2}
+  <MessagesOrder>k__BackingField:
+  - 'Whew! I didn''t expect yesterday''s shift to be that hectic. '
+  - I really need something energizing that will spring me back to life.
+  <MessagesGoodResponse>k__BackingField:
+  - OMG thanks forthespecialenergizer, ijusthope i'm not talkingtoofast now haha!!!!
+  <MessagesMehResponse>k__BackingField:
+  - I guess it helped, cause I didn't fall asleep, but I'm still very tired *yawn*
+  <MessagesBadResponse>k__BackingField:
+  - ZZZZZZZZzzzzzzzzzzzzz...

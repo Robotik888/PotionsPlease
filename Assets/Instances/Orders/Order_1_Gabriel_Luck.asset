@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_1_Gabriel_Luck
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 92502c51d3f2c8947b189f003bb58ba3, type: 2}
+  <PotionName>k__BackingField: 
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 7d9c701bf69783746a1a00616f40254b, type: 2}
+  - {fileID: 11400000, guid: 351b10baa18ab364885e582114e73b67, type: 2}
+  - {fileID: 11400000, guid: b63c142c3c1955b428af856712bc45a9, type: 2}
+  <MessagesOrder>k__BackingField:
+  - Have you heard about that new gambling dice game?
+  - I see a lot of people playing it and if you win, you get a lot of money.
+  - But I am always very unlucky with the dices.
+  - Can you make me something that will improve my chances of a good die roll?
+  <MessagesGoodResponse>k__BackingField:
+  - Magnificent, I won a tons of money last night!
+  - Jackpot!
+  <MessagesMehResponse>k__BackingField:
+  - I thought it was working. I won a lot of money. But then I lost it all.
+  - At least I could feel for a moment what it's like to be rich.
+  <MessagesBadResponse>k__BackingField:
+  - I was very confident with the potion, so I bet everything at the very beginning.
+  - Now I am homeless!

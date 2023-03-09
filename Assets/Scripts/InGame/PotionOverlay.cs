@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using PotionsPlease.Util.Systems;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,31 +7,21 @@ namespace PotionsPlease.InGame
 {
     public class PotionOverlay : MonoBehaviour
     {
-        public Vector2 PotionInHandPos => _potionInHandPoint.position;
-        public HandObject HandObject => _handObject;
+        public Transform PotionInHandPoint => _potionInHandPoint;
 
         [SerializeField] private float _handRadius;
 
         [Header("Animations")]
-        [SerializeField] private float _fadeTime;
         [SerializeField] private float _fadeShowPotionTimeDelay;
         [SerializeField] private float _hideAnimDelay;
 
         [Header("Components")]
-        [SerializeField] private Image _backgroundImage;
         [SerializeField] private PotionObject _potionObject;
         [SerializeField] private HandObject _handObject;
         [SerializeField] private Transform _potionInHandPoint;
 
-        private float _backgroundAlpha;
 
-        private void Awake()
-        {
-            _backgroundAlpha = _backgroundImage.color.a;
-            _backgroundImage.color = _backgroundImage.color.SetA(0);
-        }
-
-        public async UniTask ShowNewPotionProcedure()
+        public async UniTask GivePotionProcedureAsync()
         {
             await ShowAnimAsync();
             await DragToHandActionAsync();
@@ -40,14 +31,8 @@ namespace PotionsPlease.InGame
 
         public async UniTask ShowAnimAsync()
         {
-            /// Background
-            var tcsBackground = new UniTaskCompletionSource();
-            LeanTween.value(gameObject, 0, _backgroundAlpha, _fadeTime)
-                .setEase(LeanTweenType.easeInOutSine)
-                .setOnUpdate((float val) => _backgroundImage.color = _backgroundImage.color.SetA(val))
-                .setOnComplete(() => tcsBackground.TrySetResult());
+            var darkenAnimTask = UIManager.Instance.InGameDarken.SetDarkenAnimAsync(true);
 
-            /// Potion 
             var tcsPotion = new UniTaskCompletionSource();
             LeanTween.delayedCall(gameObject, _fadeShowPotionTimeDelay, async () =>
             {
@@ -55,14 +40,13 @@ namespace PotionsPlease.InGame
                 tcsPotion.TrySetResult();
             });
 
-            await UniTask.WhenAll(tcsBackground.Task, tcsPotion.Task);
+            await UniTask.WhenAll(darkenAnimTask, tcsPotion.Task);
         }
 
         private async UniTask DragToHandActionAsync()
         {
             _handObject.Show();
 
-            /// Set potion in front of hand image
             _potionObject.transform.SetParent(transform);
             _potionObject.transform.SetAsLastSibling();
 
@@ -72,36 +56,16 @@ namespace PotionsPlease.InGame
         private async UniTask HideAnimAsync()
         {
             await _handObject.HideAnimAsync();
-
-            var tcs = new UniTaskCompletionSource();
-            
-            LeanTween.value(gameObject, _backgroundAlpha, 0, _fadeTime)
-                .setEase(LeanTweenType.easeInOutSine)
-                .setOnUpdate((float val) => _backgroundImage.color = _backgroundImage.color.SetA(val))
-                .setOnComplete(() => tcs.TrySetResult());
-
-            await tcs.Task;
-
-            ///Try set direction
+            //await UIManager.Instance.InGameDarken.SetDarkenAnimAsync(false);
         }
 
         public bool CheckPotionInHand()
         {
-            var sqrMag = (PotionInHandPos - (Vector2)_potionObject.transform.position).sqrMagnitude;
-
+            var sqrMag = ((Vector2)_potionInHandPoint.position - (Vector2)_potionObject.transform.position + Vector2.up * _potionObject.DragOffsetY).sqrMagnitude;
             var isInRadius = sqrMag < _handRadius * _handRadius;
-
             _handObject.SetActive(isInRadius);
-            //if (isInRadius)
 
             return isInRadius;
-        }
-
-        public void SetPotionBehindHand()
-        {
-            /// Set potion behind of hand image (and as anchor parent for animation movement)
-            _potionObject.transform.SetParent(_handObject.AnchorRectTransform);
-            _potionObject.transform.SetAsFirstSibling();
         }
     }
 }

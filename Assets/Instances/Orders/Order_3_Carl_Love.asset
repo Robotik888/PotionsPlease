@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_3_Carl_Love
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: f983061cdb5d7e1489ffa750fd269d18, type: 2}
+  <PotionName>k__BackingField: Potion of love
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: f22e14b8f5ea18a45a44c70d4551318a, type: 2}
+  - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
+  - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
+  <MessagesOrder>k__BackingField:
+  - Sir, I am in love with local girl, but I am afraid that she won't go out with
+    me.
+  - Can you make me a love potion so I am sure she will like me?
+  <MessagesGoodResponse>k__BackingField:
+  - Your potion was excellent!
+  - We spent the whole day at the picnic and even kissed!
+  <MessagesMehResponse>k__BackingField:
+  - We spent some time together.
+  - But I am not really sure if it was the potion or just me.
+  <MessagesBadResponse>k__BackingField:
+  - She friendzoned me.

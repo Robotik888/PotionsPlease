@@ -17,15 +17,15 @@ namespace PotionsPlease.InGame
         [SerializeField] private ReadOnlyCollection<ItemObject> _itemObjectPrefabs;
 
         [Space]
-        [SerializeField] private Transform _shelve;
+        [SerializeField, Min(0)] private float _width;
         [SerializeField] private ItemObject _itemObjectPrefab;
 
         public Vector2[] GetItemObjectPositions() 
         {
             Vector2[] positions = new Vector2[_size];
 
-            float minX = _shelve.position.x - _shelve.localScale.x / 2.0f + _edgeOffset;
-            float maxX = _shelve.position.x + _shelve.localScale.x / 2.0f - _edgeOffset;
+            float minX = -_width / 2 + _edgeOffset;
+            float maxX = _width / 2 - _edgeOffset;
             float shift = (maxX - minX) / (_size - 1);
             float xPos = minX;
 
@@ -38,18 +38,16 @@ namespace PotionsPlease.InGame
             return positions;
         }
 
-        public void SetItems(ItemModel[] items)
-        {
-            Debug.Assert(items.Length == ItemObjects.Length, "Item model count must match item object count!");
-
-            for (int i = 0; i < items.Length; i++) 
-                ItemObjects[i].ResetState(items[i]);
-        }
-
-        public void SetItemsInactive()
+        public void SetItemsActive(bool value)
         {
             for (int i = 0; i < ItemObjects.Length; i++)
-                ItemObjects[i].SetIncactive();
+                ItemObjects[i].SetActive(value);
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position - Vector3.right * _width / 2, transform.position + Vector3.right * _width / 2);
         }
     }
 }

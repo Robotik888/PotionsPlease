@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_2_Arthur_Invisibility
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Royalty problems
+  <Customer>k__BackingField: {fileID: 11400000, guid: 4e573952e02451049a1e54f22b3bd754, type: 2}
+  <PotionName>k__BackingField: Potion of invisibility
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 64925d1ef5075514681983f1799d7c5a, type: 2}
+  - {fileID: 11400000, guid: e41f7a50e353a6d45a360ccb8dac65c7, type: 2}
+  - {fileID: 11400000, guid: 06eae39d7e4b13a4388c8677c898c41b, type: 2}
+  <MessagesOrder>k__BackingField:
+  - Hello, mister, please don't tell anyone I was here.
+  - My father wants me to study gazilion subjects.
+  - "\rPlease, make me something that I can just vanish from my dad for some time,
+    so I can play outside and catch butterflies."
+  - I just need something that hides me from others, makes me invisible ideally.
+  <MessagesGoodResponse>k__BackingField:
+  - Thank you very much, mister.
+  - I am finally able to make my child dreams come true!
+  <MessagesMehResponse>k__BackingField:
+  - Sir, how exactly does a potion that only makes my ears and eyes invisible help
+    me?
+  - 'I need to study two times harder today because my dad got mad.
+
+'
+  <MessagesBadResponse>k__BackingField:
+  - 'I will never go to your store again! '
+  - This potion made me two times bigger, so everyone  can see me better than ever.
+  - I cannot even go through my secret tunnel anymore, because it is too small for
+    me now.
+  - Thank you very much for nothing. NEVER AGAIN!

@@ -1,6 +1,6 @@
 using Cysharp.Threading.Tasks;
+using PotionsPlease.Util.Systems;
 using TMPro;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 namespace PotionsPlease.InGame
@@ -8,57 +8,102 @@ namespace PotionsPlease.InGame
     [ExecuteAlways]
     public class ChatBubble : MonoBehaviour
     {
-        [SerializeField] private RectTransform _textBox;
-        [SerializeField] private RectTransform _arrow;
-        [SerializeField] private float _rightOffset;
-
+        [Header("Show & hide animation")]
+        [SerializeField] private float _messageBeforeClickDelay;
         [Space]
+        [SerializeField] private AnimationCurve _showAnimCurve;
+        [SerializeField] private float _showAnimTime;
+        [Space]
+        [SerializeField] private float _hideAnimTime;
+        [SerializeField] private AnimationCurve _hideAnimCurve;
+
+        [Header("Components")]
         [SerializeField] private TMP_Text _chatTextCalcualtor;
         [SerializeField] private TMP_Text _chatText;
         [SerializeField] private RectTransform _chatTextBoxInner;
 
-        public async UniTask ShowMessageAnim(string message)
+        private float _chatTextPadding;
+        private UniTaskCompletionSource _clickOnChatTcs;
+
+        private void Start()
+        {
+            _chatTextPadding = _chatText.rectTransform.sizeDelta.x / -2;
+            
+            UpdateTextBox(string.Empty);
+            transform.localScale = Vector3.zero;
+        }
+
+        public async UniTask ShowMessageUnclickProcedureAsync(string message, bool hideMessageAfter = true)
+        {
+            UpdateTextBox(message);
+
+            ///Show
+            await ShowMessageAnimAsync(true);
+
+            ///Tiny delay
+            await UniTask.Delay(System.TimeSpan.FromSeconds(_messageBeforeClickDelay));
+
+            ///Wait for click
+            await ClickOnChatActionAsync();
+
+            ///Hide
+            if (hideMessageAfter)
+                await ShowMessageAnimAsync(false);
+        }
+
+        public void SetMessage(string message)
+        {
+            UpdateTextBox(message);
+        }
+
+        public async UniTask ShowMessageAnimAsync(bool value)
+        {
+            if (value)
+            {
+                ///Show
+                AudioSystem.PlaySound("Message", 0.1f);
+                await transform.LeanScale(Vector3.one, _showAnimTime).setEase(_showAnimCurve).ToUniTaskAsync();
+            }
+            else
+            {
+                ///Hide
+                await transform.LeanScale(Vector3.zero, _hideAnimTime).setEase(_hideAnimCurve).ToUniTaskAsync();
+            }
+        }
+
+
+        public void UpdateTextBox(string message)
         {
             _chatTextCalcualtor.text = message;
             _chatText.text = message;
 
-            UpdateTextBox();
+            _chatTextCalcualtor.ForceMeshUpdate();
 
-            await UniTask.Delay(1000);
+            var textBoxSize = (Vector2)_chatTextCalcualtor.textBounds.size + _chatTextPadding * 2 * Vector2.one;
+            _chatTextBoxInner.sizeDelta = textBoxSize;
+            _chatTextBoxInner.anchoredPosition = Vector2.right * (textBoxSize.x / -2);
         }
 
-        public void UpdateTextBox()
+        public void NextMessage()
         {
-            var arrowExtendsX = _arrow.rect.x - _rightOffset;
-
-            _arrow.anchoredPosition = Vector2.right * -_rightOffset;
-            _textBox.anchoredPosition = Vector2.right * arrowExtendsX / 2;
-            _textBox.sizeDelta = Vector2.right * arrowExtendsX;
-
-            //TODO: Find out which of thease are needed (maybe none?)
-            _chatTextCalcualtor.SetAllDirty();
-            _chatTextCalcualtor.RecalculateClipping();
-            _chatTextCalcualtor.RecalculateMasking();
-
-            ///ENDPOINT: Find other update and setdirty methods for proper recalculating textBounds size.
-            /// Also the area sizes needs to be updated more properl
-            /// next: popup animation (using scale) 
-
-            Vector2 textBoundsSize = _chatTextCalcualtor.textBounds.size;
-            var padding = 20;
-            _chatTextBoxInner.sizeDelta = textBoundsSize + Vector2.one * padding * 2;
-            _chatTextBoxInner.anchoredPosition = Vector2.right * (-textBoundsSize.x / 2);
-
-            _chatText.text = _chatTextCalcualtor.text;
+            if (_clickOnChatTcs != null)
+                _clickOnChatTcs.TrySetResult();
         }
 
-        private void OnValidate()
+        private async UniTask ClickOnChatActionAsync()
         {
+            _clickOnChatTcs = new UniTaskCompletionSource();
+            UIManager.Instance.InGameDarken.OnClick.AddListener(NextMessage);
 
+            await _clickOnChatTcs.Task;
 
-            _chatText.text = _chatTextCalcualtor.text;
+            UIManager.Instance.InGameDarken.OnClick.RemoveListener(NextMessage);
+            _clickOnChatTcs = null;
+        }
 
-            UpdateTextBox();
+        public void MenuReset()
+        {
+            _clickOnChatTcs?.TrySetResult();
         }
     }
 }

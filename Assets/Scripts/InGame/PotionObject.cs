@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using PotionsPlease.Models;
 using PotionsPlease.Util.Managers;
+using PotionsPlease.Util.Systems;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,8 +10,7 @@ namespace PotionsPlease.InGame
 {
     public class PotionObject : MonoBehaviour, IPointerDownHandler
     {
-        private Vector2 InHandPos => PotionManager.Instance.PotionOverlay.PotionInHandPos + Vector2.up * _rectTransform.sizeDelta.y / 2;
-
+        [field: SerializeField] public float DragOffsetY { get; private set; }
         [SerializeField] private float _idlePosLerpTime;
 
         [Header("Animations")]
@@ -20,12 +20,10 @@ namespace PotionsPlease.InGame
 
         [Header("Components")]
         [SerializeField] private RectTransform _rectTransform;
-        [SerializeField] private PotionModel _model;
         [SerializeField] private Image _image;
 
         private bool _isDraggable;
         private bool _isMouseDrag;
-        private bool _inHandPointFollow;
 
 
         private Vector2 _idlePos;
@@ -38,33 +36,30 @@ namespace PotionsPlease.InGame
             _idlePos = transform.position;
             _image.color = _image.color.SetA(0);
 
+            /// Preserve finger offset for mouse control
+            if (SystemInfo.deviceType == DeviceType.Desktop)
+                DragOffsetY = 0;
         }
 
         private void Update()
         {
-            if (_inHandPointFollow)
-            {
-                transform.position = InHandPos;
-                return;
-            }
-
             if (_isMouseDrag)
             {
-                transform.position = Input.mousePosition;
+                transform.position = Input.mousePosition + Vector3.up * DragOffsetY;
 
-                var isInHand = PotionManager.Instance.PotionOverlay.CheckPotionInHand();
+                var isInHand = UIManager.Instance.PotionOverlay.CheckPotionInHand();
 
-                var isDropInput = Input.GetMouseButtonUp(0);
-                if (isDropInput)
+                if (Input.GetMouseButtonUp(0))
                 {
+                    AudioSystem.PlaySound("ItemDragStop");
+
                     if (isInHand)
                     {
                         _isDraggable = false;
                         _handSetAnimFromPos = transform.position;
 
-                        LeanTween.delayedCall(gameObject, _handSetAnimTime * 0.2f, () => PotionManager.Instance.PotionOverlay.SetPotionBehindHand());
-                        LeanTween.value(gameObject, 0, 1, _handSetAnimTime)
-                            .setOnUpdate((float val) => transform.position = Vector3.Lerp(_handSetAnimFromPos, InHandPos, val))
+                        transform.SetParent(UIManager.Instance.PotionOverlay.PotionInHandPoint);
+                        transform.LeanMoveLocal(Vector3.up * _rectTransform.sizeDelta.y / 2, _handSetAnimTime)
                             .setEase(LeanTweenType.easeOutQuint)
                             .setOnComplete(() => _dragToHandTcs.TrySetResult());
                     }
@@ -81,12 +76,15 @@ namespace PotionsPlease.InGame
         public void OnPointerDown(PointerEventData eventData)
         {
             if (_isDraggable)
+            {
                 _isMouseDrag = true;
+                AudioSystem.PlaySound("ItemDrag");
+            }
         }
 
         public async UniTask ShowAnimAsync()
         {
-            _inHandPointFollow = false;
+            AudioSystem.PlaySound("CreatePotion");
 
             var tcs = new UniTaskCompletionSource();
 
@@ -105,12 +103,9 @@ namespace PotionsPlease.InGame
         public async UniTask DragToHandActionAsync()
         {
             _isDraggable = true;
-            _inHandPointFollow = false;
 
             _dragToHandTcs = new UniTaskCompletionSource();
             await _dragToHandTcs.Task;
-
-            _inHandPointFollow = true;
         }
     }
 }

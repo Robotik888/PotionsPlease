@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_3_William_Youth
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Young heard, old apeearance
+  <Customer>k__BackingField: {fileID: 11400000, guid: 6db116dc9ac1fa742be8bf048c5bc89c, type: 2}
+  <PotionName>k__BackingField: Potion of youth
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: ce1fba7fd1658de489e4d8b5b1a494c6, type: 2}
+  - {fileID: 11400000, guid: b046fd62de0b9b941928a4aa2aac467c, type: 2}
+  - {fileID: 11400000, guid: e0555cb0842125f4a8860371efe16096, type: 2}
+  <MessagesOrder>k__BackingField:
+  - Greetings, youngling
+  - My bones, my arms, my whole body is very old and I am tired of it.
+  - I want to be young again. Can you help me?
+  <MessagesGoodResponse>k__BackingField:
+  - Brilliant, you have my gratitude!
+  - One life ends, a new one begins!
+  <MessagesMehResponse>k__BackingField:
+  - I feel as old as I was yesterday.
+  - So technically it made me 24 hours younger.
+  - Not exactly what i wanted tho.
+  <MessagesBadResponse>k__BackingField:
+  - That thing you gave me made me even older!
+  - Everything is even worse now!

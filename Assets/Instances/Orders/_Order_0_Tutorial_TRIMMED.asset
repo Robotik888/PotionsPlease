@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: _Order_0_Tutorial_TRIMMED
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Smelly tavern
+  <Customer>k__BackingField: {fileID: 11400000, guid: b844a4dbe5065de44a8a5a55fb51b0e1, type: 2}
+  <PotionName>k__BackingField: Healing Potion
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 3cfbfbda38f869141899cb820ee8f9d9, type: 2}
+  - {fileID: 11400000, guid: 38cfd1c7681ddb74d9df93f7b1f14313, type: 2}
+  - {fileID: 11400000, guid: 1a870fd2615709d41b2215e10061817f, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: ce1fba7fd1658de489e4d8b5b1a494c6, type: 2}
+  - {fileID: 11400000, guid: f22e14b8f5ea18a45a44c70d4551318a, type: 2}
+  <MessagesOrder>k__BackingField:
+  - We simply mix together things that we think might help us achieve the desired
+    effect.
+  - DO IT!
+  <MessagesGoodResponse>k__BackingField:
+  - You did it! Good job.
+  - Welcome among us!
+  - Now you're ready for your fist shft.
+  - Come back tommorow.
+  <MessagesMehResponse>k__BackingField:
+  - You did put some corrent ingredients there, but still some bad ones
+  - Try it again.
+  - Add something that you think can be used in a healing potion.
+  <MessagesBadResponse>k__BackingField:
+  - This thing would rather kill me that heal me.
+  - Try it again.
+  - Add something that you think can be used in a healing potion.

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_3_Meredith_Jumping
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 134f186cbdf46c049b28c9b8f290cffe, type: 2}
+  <PotionName>k__BackingField: Potion of jumping
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: b63c142c3c1955b428af856712bc45a9, type: 2}
+  - {fileID: 11400000, guid: 6eb72117538f2cc4099e32dcb3e30f51, type: 2}
+  - {fileID: 11400000, guid: b9ff093ebfc388446862b087673125ca, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 59f456e1f9b6da246a8dc677cdfd551b, type: 2}
+  - {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
+  <MessagesOrder>k__BackingField:
+  - Meowwwwww (she wants to jump over a wall, but she can't jump high enough)
+  <MessagesGoodResponse>k__BackingField:
+  - Meow meow (jumps over the wall with ease)
+  <MessagesMehResponse>k__BackingField:
+  - Meowww (after several tries she finally gets over the wall)
+  <MessagesBadResponse>k__BackingField:
+  - Meeeeee-ow *bumps into a wall*
