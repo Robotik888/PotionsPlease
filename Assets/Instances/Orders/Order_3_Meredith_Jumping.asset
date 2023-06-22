@@ -22,6 +22,7 @@ MonoBehaviour:
   <BannedIngredients>k__BackingField:
   - {fileID: 11400000, guid: 59f456e1f9b6da246a8dc677cdfd551b, type: 2}
   - {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
+  <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - Meowwwwww (she wants to jump over a wall, but she can't jump high enough)
   <MessagesGoodResponse>k__BackingField:

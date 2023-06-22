@@ -22,6 +22,7 @@ MonoBehaviour:
   <BannedIngredients>k__BackingField:
   - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
   - {fileID: 11400000, guid: 6eb72117538f2cc4099e32dcb3e30f51, type: 2}
+  <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - 'Whew! I didn''t expect yesterday''s shift to be that hectic. '
   - I really need something energizing that will spring me back to life.

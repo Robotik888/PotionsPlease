@@ -19,6 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64925d1ef5075514681983f1799d7c5a, type: 2}
   - {fileID: 11400000, guid: e41f7a50e353a6d45a360ccb8dac65c7, type: 2}
   - {fileID: 11400000, guid: 06eae39d7e4b13a4388c8677c898c41b, type: 2}
+  <BannedIngredients>k__BackingField: []
+  <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - Hello, mister, please don't tell anyone I was here.
   - My father wants me to study gazilion subjects.

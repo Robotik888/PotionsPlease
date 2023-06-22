@@ -16,6 +16,7 @@ public static class Constants
     public static class Tags
     {
         public const string CAULDRON = "Cauldron";
+        public const string REVERTOR = "Revertor";
     }
 
     public static class LayerMasks

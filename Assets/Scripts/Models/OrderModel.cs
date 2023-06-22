@@ -14,6 +14,7 @@ namespace PotionsPlease.Models
         [field: SerializeField] public string PotionName { get; private set; }
         [field: SerializeField] public ItemModel[] PotionIngredients { get; private set; }
         [field: SerializeField] public ItemModel[] BannedIngredients { get; private set; }
+        [field: SerializeField] public bool[] ReversedEffect { get; private set; }
 
         [field: Space]
         [field: SerializeField] public string[] MessagesOrder { get; private set; }

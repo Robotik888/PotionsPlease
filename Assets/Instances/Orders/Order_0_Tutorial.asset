@@ -22,6 +22,7 @@ MonoBehaviour:
   <BannedIngredients>k__BackingField:
   - {fileID: 11400000, guid: ce1fba7fd1658de489e4d8b5b1a494c6, type: 2}
   - {fileID: 11400000, guid: f22e14b8f5ea18a45a44c70d4551318a, type: 2}
+  <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - Ah, another potioneer in town!
   - We had a lot of orders coming lately, so new people always come in handy!

@@ -21,6 +21,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4adcb024e5bbf184899f0f3ffbc0dbc7, type: 2}
   <BannedIngredients>k__BackingField:
   - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
+  <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - My kitchen is ruined.
   - Those dams rats, they are all over the place!

@@ -95,7 +95,25 @@ namespace PotionsPlease.Util.Managers
 
         public async void EndOrder(ItemModel[] cauldronItems)
         {
-            var rating = _order.PotionIngredients.Where(e => cauldronItems.Contains(e)).Count();
+            // WITHOUT REVERSE FUNCTIONALITY
+            //var rating = _order.PotionIngredients.Where(e => cauldronItems.Contains(e)).Count();
+            int rating = 0;
+
+            for (int index = 0; index < _order.PotionIngredients.Length; index++)
+            {
+                if (cauldronItems.Contains(_order.PotionIngredients[index]) && _order.PotionIngredients[index].IsReverted == _order.ReversedEffect[index])
+                {
+                    rating += 1;
+                }
+            }
+
+            foreach(ShelveObject shelve in _shelves)
+            {
+                foreach(ItemObject obj in shelve.ItemObjects)
+                {
+                    obj.ItemModel.IsReverted = false;
+                }
+            }
 
             UIManager.Instance.ResetItemInfoText();
             SetShelfItemsActive(false);

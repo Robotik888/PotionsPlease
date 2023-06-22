@@ -19,6 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5d44911688216144ad9f3f4809b046f, type: 2}
   - {fileID: 11400000, guid: f735b65cfa5d101449eca53704917e4c, type: 2}
   - {fileID: 11400000, guid: db4dcee299e816f4b955fa8bbf7e33cc, type: 2}
+  <BannedIngredients>k__BackingField: []
+  <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - There have been a few buzzkills in my tavern lately.
   - Can you please make me someting I can mix in their drinks so they're not that

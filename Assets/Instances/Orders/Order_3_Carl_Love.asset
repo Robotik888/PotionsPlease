@@ -19,6 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f22e14b8f5ea18a45a44c70d4551318a, type: 2}
   - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
   - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
+  <BannedIngredients>k__BackingField: []
+  <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - Sir, I am in love with local girl, but I am afraid that she won't go out with
     me.

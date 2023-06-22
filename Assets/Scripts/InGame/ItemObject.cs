@@ -19,11 +19,13 @@ namespace PotionsPlease.InGame
             Inactive
         }
         public float ShelfScale => _shelfScale;
-        public ItemModel ItemModel { get; private set; }
+        [field: SerializeField] public ItemModel ItemModel { get; private set; }
         public bool IsMenuDisable { get; set; } = true;
         private bool IsDraggable => !IsMenuDisable && _state != ItemObjectState.Fall && _state != ItemObjectState.InCauldron && _state != ItemObjectState.Inactive;
 
+
         [field: SerializeField] public float DragOffsetY { get; private set; }
+        [field: SerializeField] public SpriteRenderer RevertSprite { get; set; }
 
         [SerializeField] private float _dragBottomBound;
 
@@ -56,15 +58,18 @@ namespace PotionsPlease.InGame
 
         private int _sortingOrder;
 
+
         public void Initialize(Vector2 shelfPos)
         {
             _shelfPos = shelfPos;
             transform.position = _shelfPos;
+
         }
 
         private void Start()
         {
             _sortingOrder = _spriteRenderer.sortingOrder;
+            SetRevertSpriteVisibilityFalse();
         }
 
         private void Update()
@@ -97,10 +102,21 @@ namespace PotionsPlease.InGame
             if (_state == ItemObjectState.Fall && collision.gameObject.CompareTag(Constants.Tags.CAULDRON))
             {
                 _spriteRenderer.color = _spriteRenderer.color.SetA(0);
+                RevertSprite.enabled = false;
                 _state = ItemObjectState.InCauldron;
                 GameManager.Instance.Cauldron.AddItem(ItemModel);
             }
+
         }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if ((_state == ItemObjectState.Idle || _state == ItemObjectState.Fall) && collision.gameObject.CompareTag(Constants.Tags.REVERTOR))
+            {
+                RevertObject();
+            }
+        }
+
 
         private void OnMouseDrag()
         {
@@ -198,6 +214,17 @@ namespace PotionsPlease.InGame
         private void SetAsFrontItem(bool value)
         {
             _spriteRenderer.sortingOrder = _sortingOrder + (value ? 1 : 0);
+        }
+
+        private void RevertObject()
+        {
+            ItemModel.IsReverted = !ItemModel.IsReverted;
+            RevertSprite.enabled = !RevertSprite.enabled;
+        }
+
+        private void SetRevertSpriteVisibilityFalse()
+        {
+            RevertSprite.enabled = false;
         }
     }
 }

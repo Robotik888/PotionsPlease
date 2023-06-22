@@ -19,6 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2893e796bb931144f9317061466bed75, type: 2}
   - {fileID: 11400000, guid: 81c2db90af885b946a0427ef955dbf43, type: 2}
   - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
+  <BannedIngredients>k__BackingField: []
+  <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - Meow meeeeow meow (you should probably make her some food)
   <MessagesGoodResponse>k__BackingField:
