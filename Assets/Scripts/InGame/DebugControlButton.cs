@@ -38,7 +38,8 @@ namespace PotionsPlease.InGame
                             PlayerPrefsHandler.SetLevelStars(3, 12);
                             PlayerPrefsHandler.SetLevelStars(4, 12);
                             PlayerPrefsHandler.SetLevelStars(5, 12);
-                            PlayerPrefsHandler.LastLevelIndex = 5;
+                            PlayerPrefsHandler.SetLevelStars(6, 3);
+                            PlayerPrefsHandler.LastLevelIndex = 6;
                             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
                             //MenuManager.Instance.UpdateMenuButtons();
                             break;

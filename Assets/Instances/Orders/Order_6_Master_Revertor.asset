@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_6_Master_Revertor
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 16428eba1cf35ae4bb061025d48ae811, type: 2}
+  <PotionName>k__BackingField: Potion of Hate
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: f22e14b8f5ea18a45a44c70d4551318a, type: 2}
+  - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
+  - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 2ca520c54bbad424ebcc96226948db14, type: 2}
+  - {fileID: 11400000, guid: b046fd62de0b9b941928a4aa2aac467c, type: 2}
+  - {fileID: 11400000, guid: 3cfbfbda38f869141899cb820ee8f9d9, type: 2}
+  - {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
+  <ReversedEffect>k__BackingField: 010101
+  <MessagesOrder>k__BackingField:
+  - Hello, potioneer! I see you are doing great! Listen, we don't have enough money
+    to buy all ingredients you need for your potions.
+  - But thanks to your great work, I stole your Revert potion recipe from yesterday,
+    improved it and combined it with good old machines.
+  - You can see that on the left of your cauldron, there is a revertion box. This
+    is your new help. It reverts effect of any ingredient, so you can mix more potions
+    with less specific ingredients.
+  - You simply put here ingredient and after reversal process, you will notice the
+    revertion sign. Than you can use it as normally but with oposite effect.
+  - 'Try this simple potion for me:'
+  - In the past, you mixed love potion, now , cook for me Hate potion with use of
+    ingredients from love potion (if you remember them).
+  <MessagesGoodResponse>k__BackingField:
+  - I see you are learning very fast. Enjoy your day with your new toy.
+  - And remember that in future potions not all the ingredients must be reverted.
+    You can revert from 0 to all.
+  <MessagesMehResponse>k__BackingField:
+  - There are some mistakes, but you are quite good.
+  - And remember that in future potions not all the ingredients must be reverted.
+    You can revert from 0 to all.
+  <MessagesBadResponse>k__BackingField:
+  - You dissapointed me.... Just try your best and you will see...
+  - And remember that in future potions not all the ingredients must be reverted.
+    You can revert from 0 to all.

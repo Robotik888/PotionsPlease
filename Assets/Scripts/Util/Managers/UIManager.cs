@@ -61,10 +61,14 @@ namespace PotionsPlease.InGame
 
             OrderManager.Instance.SetItemsDisable(true);
 
+
             GlobalDarken.gameObject.SetActive(true);
+
             await GlobalDarken.SetDarkenAnimAsync(true);
             _awakeStartLevel = levelIndex;
             SceneManager.LoadScene(0);
+
+
         }
         
         private async void StartLevelEnd()
@@ -76,7 +80,14 @@ namespace PotionsPlease.InGame
                 .setOnUpdate((Color color) => _levelNameText.color = color)
                 .setEase(_startLevelAnimTextCurve)
                 .ToUniTaskAsync();
-
+            if (_awakeStartLevel <= 5)
+            {
+                Revertor.Instance.disableMe();
+            }
+            else
+            {
+                Revertor.Instance.enableMe();
+            }
             AudioSystem.Instance.SetSoundtrackMenuState(false);
             await GlobalDarken.SetDarkenAnimAsync(false);
 

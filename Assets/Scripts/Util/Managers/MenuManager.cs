@@ -105,7 +105,9 @@ namespace PotionsPlease.Util.Managers
                 _levelButtons[i].UpdateState();
         }
 
-        public void PlayLevel(int levelIndex) => UIManager.Instance.StartLevelBegin(levelIndex);
+        public void PlayLevel(int levelIndex) {
+            UIManager.Instance.StartLevelBegin(levelIndex);
+        } 
 
         public void PlayButtonClick() => PlayLevel(PlayerPrefsHandler.LastLevelIndex);
         public void TutorialButtonClick() => PlayLevel(0);
@@ -148,7 +150,7 @@ namespace PotionsPlease.Util.Managers
         public void SummaryNextLevelClick()
         {
             /// Capped at 3 for demo
-            var nextLevel = Mathf.Min(GameManager.Instance.LevelIndexCurrent + 1, 5);
+            var nextLevel = Mathf.Min(GameManager.Instance.LevelIndexCurrent + 1, 6);
             PlayLevel(nextLevel);
         }
     }

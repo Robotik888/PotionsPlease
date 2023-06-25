@@ -49,6 +49,7 @@ namespace PotionsPlease.Util.Managers
 
         public void StartLevel(int levelIndex)
         {
+
             LevelIndexCurrent = levelIndex;
             OrderManager.Instance.StartLevel(levelIndex);
         }
