@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_5_Gabriel_NoMoney
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 92502c51d3f2c8947b189f003bb58ba3, type: 2}
+  <PotionName>k__BackingField: Money attraction potion
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: cb4f6be7b0cfa32458b136c35536124f, type: 2}
+  - {fileID: 11400000, guid: 7d9c701bf69783746a1a00616f40254b, type: 2}
+  - {fileID: 11400000, guid: 17a12b189b485d347921d5b81ea37682, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 4fe76f9230cbf134aac66327fa98173c, type: 2}
+  - {fileID: 11400000, guid: 17ded3a108f10374c9e01605fecdcca0, type: 2}
+  - {fileID: 11400000, guid: 885235532ccfd0f459363bbca79d4372, type: 2}
+  - {fileID: 11400000, guid: 78fa1cba8d620a44a84d01a5e5ac90b9, type: 2}
+  - {fileID: 11400000, guid: 5bdee1d7c293e53458703dbbf2c81c21, type: 2}
+  - {fileID: 11400000, guid: 351b10baa18ab364885e582114e73b67, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - The rich folks robbed me and disappeared! I don't know what to do anymore. Can
+    you make some potion that will attract money?
+  <MessagesGoodResponse>k__BackingField:
+  - Yeaaah! Money everywhere!!!
+  <MessagesMehResponse>k__BackingField:
+  - The only money attracted to me are coins... Do you know how painful is to be
+    hit by a golden coin??
+  <MessagesBadResponse>k__BackingField:
+  - I have not seen money for a few days... I am afraid that you did something veeery
+    wrong!
