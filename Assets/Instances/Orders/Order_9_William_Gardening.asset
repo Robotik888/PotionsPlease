@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_9_William_Gardening
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 6db116dc9ac1fa742be8bf048c5bc89c, type: 2}
+  <PotionName>k__BackingField: Gardening potion
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 3366ceef36b22e048ac5a55155cbde84, type: 2}
+  - {fileID: 11400000, guid: 22035e3fb5eb5034e8e9a1b7ce83e8ac, type: 2}
+  - {fileID: 11400000, guid: bcfbd822eff80aa419b43e28ab2aa5d3, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 59f456e1f9b6da246a8dc677cdfd551b, type: 2}
+  - {fileID: 11400000, guid: 540a5b1e73176ab4dbd7f5f351875e60, type: 2}
+  - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
+  - {fileID: 11400000, guid: b9ff093ebfc388446862b087673125ca, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - "Hello, fella, I would like to start gardening with my new friend but I know
+    nothing about it. Can you prepare me a potion of gardening?\t\t \t\t \t\t \t\t
+    \t\t"
+  <MessagesGoodResponse>k__BackingField:
+  - I know everything now! Thank you, my new friend will be surprised!
+  <MessagesMehResponse>k__BackingField:
+  - I know some things now, but I hardly impress my new friend.
+  <MessagesBadResponse>k__BackingField:
+  - Okay, so my friend told me I need soil for growing plants... How I don't know
+    this??

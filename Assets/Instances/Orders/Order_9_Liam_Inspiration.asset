@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_9_Liam_Inspiration
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 284a43c231e19cc4abde6959766d1afd, type: 2}
+  <PotionName>k__BackingField: Potion of inspiration
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 10608c11405b8cb48897a65e00eaec0d, type: 2}
+  - {fileID: 11400000, guid: f61f7bd708a863542bfb4d6719deed16, type: 2}
+  - {fileID: 11400000, guid: 17ded3a108f10374c9e01605fecdcca0, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 5bdee1d7c293e53458703dbbf2c81c21, type: 2}
+  - {fileID: 11400000, guid: f735b65cfa5d101449eca53704917e4c, type: 2}
+  - {fileID: 11400000, guid: cb4f6be7b0cfa32458b136c35536124f, type: 2}
+  - {fileID: 11400000, guid: 4fe76f9230cbf134aac66327fa98173c, type: 2}
+  - {fileID: 11400000, guid: f5d44911688216144ad9f3f4809b046f, type: 2}
+  - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
+  - {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - "I'm all out of ideas. I would like a potion that will boost my inspiration.\t\t
+    \t\t \t\t \t\t \t\t"
+  <MessagesGoodResponse>k__BackingField:
+  - I know exactly what to cook!! So many new dishes!! You have to come tomorrow
+    to my restaurant!
+  <MessagesMehResponse>k__BackingField:
+  - I figured out few meals. Maybe they will be good.
+  <MessagesBadResponse>k__BackingField:
+  - So... Mac'n cheese?

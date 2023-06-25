@@ -19,7 +19,7 @@ namespace PotionsPlease.Util
         public static int LastLevelIndex
         {
             get => PlayerPrefs.GetInt(nameof(LastLevelIndex));
-            set => PlayerPrefs.SetInt(nameof(LastLevelIndex), Mathf.Min(Mathf.Max(LastLevelIndex, value), 8)); /// Capped at 3 (temporary)
+            set => PlayerPrefs.SetInt(nameof(LastLevelIndex), Mathf.Min(Mathf.Max(LastLevelIndex, value), 9)); /// Capped at 3 (temporary)
         }
 
         public static int GetLevelStars(int levelIndex) => PlayerPrefs.GetInt($"Level{levelIndex}");

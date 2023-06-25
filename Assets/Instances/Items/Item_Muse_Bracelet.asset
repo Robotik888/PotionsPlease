@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8231390d3cf8f7845b300551d6940e59, type: 3}
+  m_Name: Item_Muse_Bracelet
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Bracelet of muses
+  <Description>k__BackingField: The value of this piece is not in the material, but
+    in the history and atmosphere
+  <Sprite>k__BackingField: {fileID: 21300000, guid: de8b3a2ff00d52f42b4174742da0203a, type: 3}
+  <IsReverted>k__BackingField: 0

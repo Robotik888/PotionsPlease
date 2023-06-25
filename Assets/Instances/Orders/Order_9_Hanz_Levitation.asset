@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_9_Hanz_Levitation
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 831f030d3dafe954fba96abfcc2602da, type: 2}
+  <PotionName>k__BackingField: Potion of levitation
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: aad6ac25aae80634abc668a687131e0e, type: 2}
+  - {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
+  - {fileID: 11400000, guid: 06eae39d7e4b13a4388c8677c898c41b, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: b9ff093ebfc388446862b087673125ca, type: 2}
+  - {fileID: 11400000, guid: 2893e796bb931144f9317061466bed75, type: 2}
+  - {fileID: 11400000, guid: 4337daac1781f2a49b7b395b02a8a0d3, type: 2}
+  - {fileID: 11400000, guid: 6eb72117538f2cc4099e32dcb3e30f51, type: 2}
+  - {fileID: 11400000, guid: 33305d0832fa7bb4d8dd5f220f05d512, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - "I am bored without talking to people, so I need something new and exciting.
+    Can you make me a potion that will make me levitate?\t\t \t\t \t\t \t\t \t\t"
+  <MessagesGoodResponse>k__BackingField:
+  - '**wheeeeeee**........**wheeeeeeeee**'
+  <MessagesMehResponse>k__BackingField:
+  - These are just advanced jumpes... what is this?
+  <MessagesBadResponse>k__BackingField:
+  - I can hardly lift my feet from the ground!

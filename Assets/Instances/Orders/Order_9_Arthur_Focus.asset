@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_9_Arthur_Focus
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 4e573952e02451049a1e54f22b3bd754, type: 2}
+  <PotionName>k__BackingField: Potion of focus
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 5bde8111cdce3c143a1974a84472b330, type: 2}
+  - {fileID: 11400000, guid: db440aa4aaafe8742bb81239c9655f42, type: 2}
+  - {fileID: 11400000, guid: f6f818a4445e96e408e85d781a9c097a, type: 2}
+  <BannedIngredients>k__BackingField: []
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - Hello, mr. My daddy wants me to study again, but this time, I decided to face
+    it! However I can't focus because all these things around me.
+  - Can you make me some potion of focus, so I can study, please?
+  <MessagesGoodResponse>k__BackingField:
+  - Pi equals 3.14159265..... It is so easy now!!!
+  <MessagesMehResponse>k__BackingField:
+  - It is boring, but at least I am doing something... Yeah, what is this?
+  <MessagesBadResponse>k__BackingField:
+  - Squirrel here! And here is a bird! And I see a fox in the distance!!!
