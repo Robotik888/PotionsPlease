@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_8_2_William
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 6db116dc9ac1fa742be8bf048c5bc89c, type: 2}
+  <PotionName>k__BackingField: Potion of socaliazition
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 1a45800ecf9f0db4380614ae1d4ad5f4, type: 2}
+  - {fileID: 11400000, guid: c3c1cf5c831eb6c45b571285c4775cd3, type: 2}
+  - {fileID: 11400000, guid: 4fee7bce99450d248a8ac56c7aca206d, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
+  - {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
+  - {fileID: 11400000, guid: db4dcee299e816f4b955fa8bbf7e33cc, type: 2}
+  - {fileID: 11400000, guid: 423299227f2234649a43690043575000, type: 2}
+  - {fileID: 11400000, guid: 38ed1f3453067d6489cac4f37b8e5a20, type: 2}
+  <ReversedEffect>k__BackingField: 000001
+  <MessagesOrder>k__BackingField:
+  - "Hey, sorry, I want to make new friends, but I'm already out of touch with these
+    old folks. Can you make me something that will help me socialize?\t\t \t\t \t\t
+    \t\t \t\t"
+  <MessagesGoodResponse>k__BackingField:
+  - I made three new friends! This will be nice and peaceful age.
+  <MessagesMehResponse>k__BackingField:
+  - I didn' make a new friend but I connected with my older friends. Thank you.
+  <MessagesBadResponse>k__BackingField:
+  - I have no one. I am old and alone. What did you do?

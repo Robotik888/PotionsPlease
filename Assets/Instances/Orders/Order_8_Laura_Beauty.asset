@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_8_Laura_Beauty
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: f46e8bc1ce1b8d248aa563848a31deb1, type: 2}
+  <PotionName>k__BackingField: Beauty potion
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 59f456e1f9b6da246a8dc677cdfd551b, type: 2}
+  - {fileID: 11400000, guid: b046fd62de0b9b941928a4aa2aac467c, type: 2}
+  - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 540a5b1e73176ab4dbd7f5f351875e60, type: 2}
+  - {fileID: 11400000, guid: e0555cb0842125f4a8860371efe16096, type: 2}
+  - {fileID: 11400000, guid: 4fe76f9230cbf134aac66327fa98173c, type: 2}
+  - {fileID: 11400000, guid: cb4f6be7b0cfa32458b136c35536124f, type: 2}
+  - {fileID: 11400000, guid: 2893e796bb931144f9317061466bed75, type: 2}
+  - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
+  - {fileID: 11400000, guid: b9ff093ebfc388446862b087673125ca, type: 2}
+  - {fileID: 11400000, guid: ce1fba7fd1658de489e4d8b5b1a494c6, type: 2}
+  - {fileID: 11400000, guid: e6d8f85d707572741872914ccfec0e6e, type: 2}
+  - {fileID: 11400000, guid: 17ded3a108f10374c9e01605fecdcca0, type: 2}
+  <ReversedEffect>k__BackingField: 010000
+  <MessagesOrder>k__BackingField:
+  - 'Hello, I would like to ask, if you are able to help me?  I just met very nice
+    men and I would like to talk to him, but he is so pretty, that I am afraid he
+    will reject me. '
+  - 'Can you make me little bit of beauty potion? '
+  <MessagesGoodResponse>k__BackingField:
+  - Oh god, who is the girl in the mirror? She is gorgeous! Oh right, it's me!
+  <MessagesMehResponse>k__BackingField:
+  - I feel prettier, but I am not sure.
+  <MessagesBadResponse>k__BackingField:
+  - I am hidious!!! What have you done???
