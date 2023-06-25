@@ -150,7 +150,7 @@ namespace PotionsPlease.Util.Managers
         public void SummaryNextLevelClick()
         {
             /// Capped at 3 for demo
-            var nextLevel = Mathf.Min(GameManager.Instance.LevelIndexCurrent + 1, 6);
+            var nextLevel = Mathf.Min(GameManager.Instance.LevelIndexCurrent + 1, 7);
             PlayLevel(nextLevel);
         }
     }

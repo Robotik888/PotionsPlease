@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_7_William_Elder
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 6db116dc9ac1fa742be8bf048c5bc89c, type: 2}
+  <PotionName>k__BackingField: Elder potion
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: b046fd62de0b9b941928a4aa2aac467c, type: 2}
+  - {fileID: 11400000, guid: e0555cb0842125f4a8860371efe16096, type: 2}
+  - {fileID: 11400000, guid: 94eaa08e1779101418d66dfcd6697293, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: ce1fba7fd1658de489e4d8b5b1a494c6, type: 2}
+  - {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
+  - {fileID: 11400000, guid: 2ca520c54bbad424ebcc96226948db14, type: 2}
+  - {fileID: 11400000, guid: a378c941514505849ada94845b1ec06c, type: 2}
+  - {fileID: 11400000, guid: aaf40f747fd08434db8af809a09cf064, type: 2}
+  - {fileID: 11400000, guid: d33961e1abda2c94b8243b2da8c21c6e, type: 2}
+  - {fileID: 11400000, guid: 2a728e4e4baecef48a35dc4ca320ecb0, type: 2}
+  - {fileID: 11400000, guid: f22e14b8f5ea18a45a44c70d4551318a, type: 2}
+  - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
+  <ReversedEffect>k__BackingField: 010100
+  <MessagesOrder>k__BackingField:
+  - I cannot do this anymore. These young people are very different. I was much happier
+    when I was old. Can you please make me potion, so I can be old again?
+  <MessagesGoodResponse>k__BackingField:
+  - Much better, dear potioneer. Good luck with other potions.
+  <MessagesMehResponse>k__BackingField:
+  - I am 45? I wanted to be at least 70. I will try to make it work.
+  <MessagesBadResponse>k__BackingField:
+  - Are you kidding me??? Now you are older than me!

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_7_Betty_Music
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 902843122d6943f45ace14dc54e5ca78, type: 2}
+  <PotionName>k__BackingField: Musical potion
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: f6f818a4445e96e408e85d781a9c097a, type: 2}
+  - {fileID: 11400000, guid: 33d48ee1496c55a49ad3ad0fe9569fb1, type: 2}
+  - {fileID: 11400000, guid: 38ed1f3453067d6489cac4f37b8e5a20, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
+  - {fileID: 11400000, guid: 423299227f2234649a43690043575000, type: 2}
+  <ReversedEffect>k__BackingField: 010000
+  <MessagesOrder>k__BackingField:
+  - "Musicians in my tavern are so bad. Can you make me some potion, so they can
+    hear themselves and play better music?\t\t \t\t \t\t \t\t \t\t"
+  <MessagesGoodResponse>k__BackingField:
+  - '**Hearing beautiful music to your shop**'
+  - I did't knew they can play so good!
+  <MessagesMehResponse>k__BackingField:
+  - '**Hearing some squeeky music**'
+  - Well, at least it is better than before.
+  <MessagesBadResponse>k__BackingField:
+  - '**Hearing cracking drum membrane, ripping strings and shouting voice out of
+    tune.**'
+  - I did't know it can be worse!!!

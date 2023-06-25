@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_7_Carl_Firebreathing
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: f983061cdb5d7e1489ffa750fd269d18, type: 2}
+  <PotionName>k__BackingField: Fire breathing potion
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: b3967470dd72cbc49af5a3c7099fa494, type: 2}
+  - {fileID: 11400000, guid: b863986932a39404b9647e0933ecdd43, type: 2}
+  - {fileID: 11400000, guid: c1350b8e3a3c07945a0215468915bccf, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 2ca520c54bbad424ebcc96226948db14, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - "Hi, I was wandering.... Can you make me a potion of Fire breath so I can melt
+    metal with it instead of blast furnace?\t\t \t\t \t\t \t\t \t\t"
+  <MessagesGoodResponse>k__BackingField:
+  - Roooaaaarr!!!!! Wow, it is stronger than I imagined.
+  <MessagesMehResponse>k__BackingField:
+  - With this breath, I can only melt copper or tin, but not iron or steal... quite
+    useless, but cool.
+  <MessagesBadResponse>k__BackingField:
+  - With this breath I can maybe set paper on fire, nothing else.
