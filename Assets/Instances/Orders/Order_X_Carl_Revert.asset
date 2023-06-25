@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_X_Carl_Revert
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Potion of reversal
+  <Customer>k__BackingField: {fileID: 11400000, guid: 284a43c231e19cc4abde6959766d1afd, type: 2}
+  <PotionName>k__BackingField: 
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 885235532ccfd0f459363bbca79d4372, type: 2}
+  - {fileID: 11400000, guid: 15b3a3b69073aca4c8e751b2d7a51ded, type: 2}
+  - {fileID: 11400000, guid: e6d8f85d707572741872914ccfec0e6e, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: e41f7a50e353a6d45a360ccb8dac65c7, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - Hey, I'm trying to learn how to make macaroons, but I keep messing them up.
+  - Could you please make me something that will revert the process, so I can remake
+    them?
+  <MessagesGoodResponse>k__BackingField:
+  - Great! Now, I can try as many times as I want.
+  <MessagesMehResponse>k__BackingField:
+  - It worked at first, but now, I made macaroons poridge and I am not able to get
+    back.
+  <MessagesBadResponse>k__BackingField:
+  - 'It is terrible, it didn''t revert the process even one time. '

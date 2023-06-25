@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_4_Betty_Cleaning
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Cleaning potion
+  <Customer>k__BackingField: {fileID: 11400000, guid: 902843122d6943f45ace14dc54e5ca78, type: 2}
+  <PotionName>k__BackingField: Cleaning potion
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
+  - {fileID: 11400000, guid: 589977992f9d36541b02eb76d2f0ea6f, type: 2}
+  - {fileID: 11400000, guid: b6ea51b5293ef6d4fb9cbe1253beaea1, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 3cfbfbda38f869141899cb820ee8f9d9, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - I really need to clean up after last night. Please make me a cleaning solvent
+    that gets rid of all of that filth.
+  <MessagesGoodResponse>k__BackingField:
+  - It cleaned everything perfectly, my cat even thinks it is too much.
+  <MessagesMehResponse>k__BackingField:
+  - Yeah, now, my tavern is much cleaner, but there are still some nasty things under
+    the tables.
+  <MessagesBadResponse>k__BackingField:
+  - I don't know how you managed it, but the tavern looks much worse than before...

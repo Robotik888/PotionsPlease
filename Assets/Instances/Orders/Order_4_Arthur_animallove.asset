@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_4_Arthur_animallove
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 4e573952e02451049a1e54f22b3bd754, type: 2}
+  <PotionName>k__BackingField: Animal love
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 2a728e4e4baecef48a35dc4ca320ecb0, type: 2}
+  - {fileID: 11400000, guid: 3df474d325ef83f42b70fc833fb2d156, type: 2}
+  - {fileID: 11400000, guid: aaf40f747fd08434db8af809a09cf064, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: b9ff093ebfc388446862b087673125ca, type: 2}
+  - {fileID: 11400000, guid: b63c142c3c1955b428af856712bc45a9, type: 2}
+  - {fileID: 11400000, guid: 3df474d325ef83f42b70fc833fb2d156, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - I want to play with animals, but they always run away from me. Please make me
+    a potion that will make them like me.
+  <MessagesGoodResponse>k__BackingField:
+  - '**Looks at you with 10 animals on his shoulder**'
+  - Thank you, Mr. I think it worked.
+  <MessagesMehResponse>k__BackingField:
+  - '**Running around with two mice behind him**'
+  - I made few new friends Mr.
+  <MessagesBadResponse>k__BackingField:
+  - '**Crying**'
+  - Animals are afraid of me more than ever before....

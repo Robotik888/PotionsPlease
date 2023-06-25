@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_4_Liam_Seasoning
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Customer>k__BackingField: {fileID: 11400000, guid: 284a43c231e19cc4abde6959766d1afd, type: 2}
+  <PotionName>k__BackingField: Seasoning
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: c1350b8e3a3c07945a0215468915bccf, type: 2}
+  - {fileID: 11400000, guid: d33961e1abda2c94b8243b2da8c21c6e, type: 2}
+  - {fileID: 11400000, guid: 3cfbfbda38f869141899cb820ee8f9d9, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 81c2db90af885b946a0427ef955dbf43, type: 2}
+  - {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
+  - {fileID: 11400000, guid: 2ca520c54bbad424ebcc96226948db14, type: 2}
+  - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - My food tastes horrible after I started getting those poor quality ingredients.
+  - Please make me a seasoning that tastes good so I can mask the foul taste.
+  <MessagesGoodResponse>k__BackingField:
+  - I don't know what you put in this, but my customers are very happy, so am I.
+  <MessagesMehResponse>k__BackingField:
+  - I must say that this is quite tasty, but still has a weird tail.
+  <MessagesBadResponse>k__BackingField:
+  - After opening the bottle, My whole kitchen started to smell like dogfood and
+    now my dishes are ruined completely!
