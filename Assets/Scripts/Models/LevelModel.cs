@@ -12,7 +12,13 @@ namespace PotionsPlease.Models
         [field: SerializeField] public string Name { get; private set; }
         [field: SerializeField] public List<OrderModel> Orders { get; private set; }
 
-        public bool GetLevelDoneByRating(int rating) => RatingMax - rating <= 2;
+        public bool GetLevelDoneByRating(int rating, bool levelIndex) { 
+            if (levelIndex)
+            {
+                return rating == 3;
+            }
+            return RatingMax - rating <= 2; 
+        }
     }
 }
 

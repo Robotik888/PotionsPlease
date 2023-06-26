@@ -137,11 +137,26 @@ namespace PotionsPlease.Util.Managers
             _summaryRatingText.text = $"{rating}/{ratingMax} {UIManager.SPRITE_STAR}";
 
             var levelIndex = GameManager.Instance.LevelIndexCurrent;
-            _summaryHeaderText.text = $"{(levelIndex == 0 ? "Tutorial" : $"Day {levelIndex}")}\ncompleted";
+            if (levelIndex == 10)
+            {
+                _summaryHeaderText.text = $"{(levelIndex == 0 ? "Tutorial" : $"YOU WON!")}";
+            } else
+            {
+                _summaryHeaderText.text = $"{(levelIndex == 0 ? "Tutorial" : $"Day {levelIndex}")}\ncompleted";
+            }
+
 
             _summaryNextLevelButton.interactable = isLevelDone;
 
-            _summaryRatingDescText.text = isLevelDone ? string.Empty : $"You need at least {ratingMax - 2} {UIManager.SPRITE_STAR} to continue.";
+            if (levelIndex == 10)
+            {
+                _summaryRatingDescText.text = isLevelDone ? string.Empty : $"But you DIED!";
+            }
+            else
+            {
+                _summaryRatingDescText.text = isLevelDone ? string.Empty : $"You need at least {ratingMax - 2} {UIManager.SPRITE_STAR} to continue.";
+            }
+
 
             await UIManager.Instance.InGameDarken.SetDarkenAnimAsync(true);
             await _summaryCanvasGroup.LeanAlpha(1, 0.5f).setEaseOutQuint().ToUniTaskAsync();
@@ -150,7 +165,7 @@ namespace PotionsPlease.Util.Managers
         public void SummaryNextLevelClick()
         {
             /// Capped at 3 for demo
-            var nextLevel = Mathf.Min(GameManager.Instance.LevelIndexCurrent + 1, 9);
+            var nextLevel = Mathf.Min(GameManager.Instance.LevelIndexCurrent + 1, 10);
             PlayLevel(nextLevel);
         }
     }

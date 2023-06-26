@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f027f7e0efc1ac49a94dfc8f423f5e5, type: 3}
+  m_Name: Order_10
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: The End
+  <Customer>k__BackingField: {fileID: 11400000, guid: 16428eba1cf35ae4bb061025d48ae811, type: 2}
+  <PotionName>k__BackingField: The End?
+  <PotionIngredients>k__BackingField:
+  - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
+  - {fileID: 11400000, guid: 3366ceef36b22e048ac5a55155cbde84, type: 2}
+  - {fileID: 11400000, guid: b63c142c3c1955b428af856712bc45a9, type: 2}
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: e9cca5b04a24f0f4ab683c7da078b791, type: 2}
+  - {fileID: 11400000, guid: 4adcb024e5bbf184899f0f3ffbc0dbc7, type: 2}
+  - {fileID: 11400000, guid: a378c941514505849ada94845b1ec06c, type: 2}
+  - {fileID: 11400000, guid: 64925d1ef5075514681983f1799d7c5a, type: 2}
+  - {fileID: 11400000, guid: 2893e796bb931144f9317061466bed75, type: 2}
+  <ReversedEffect>k__BackingField: 000000
+  <MessagesOrder>k__BackingField:
+  - Hey! I heard you are really good now...
+  - Everyone from the town praises you...
+  - Maybe, you are TOOOO good for this town...
+  - Your last task here will be veeery easy...
+  - Just prepare an Instant DEATH potion for me...
+  - And than you will recieve your price... So don't mess this up!
+  <MessagesGoodResponse>k__BackingField:
+  - Great, now enjoy a cup of tea with me!
+  - You loook... alive...
+  - How is this po... poss....
+  - ...
+  - '**You now realize you prepared death potion so badly that it killed the person
+    who wanted to use it**'
+  - '**So now....**'
+  - '**RUN!!!**'
+  <MessagesMehResponse>k__BackingField:
+  - Great, now enjoy a cup of tea with me!
+  - I hope, you like it!
+  - Mu - ha - haaa!!!
+  - Nobody will steal my customers... I wanted you here just, so you can scare people
+    with your amater potions, but you just wanted to be good...
+  - And what is worse... you were TOO good...
+  - ...
+  <MessagesBadResponse>k__BackingField:
+  - Great, now enjoy a cup of tea with me!
+  - I see, that you really like a tea with your special ingredient!
+  - MU - HA - HA - HAAAA!!!
+  - Nobody will steal my customers... I wanted you here just, so you can scare people
+    with your amater potions, but you just wanted to be good...
+  - And what is worse... you were TOO good...
+  - ...

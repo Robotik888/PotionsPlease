@@ -15,6 +15,7 @@ namespace PotionsPlease.Util.Managers
 
         [Header("Level & Order")]
         private LevelModel _level;
+        [SerializeField] public LevelModel EndLevel;
         private OrderModel _order;
         [SerializeField] private int _orderIndex = -1;
 
@@ -103,7 +104,17 @@ namespace PotionsPlease.Util.Managers
             {
                 if (cauldronItems.Contains(_order.PotionIngredients[index]) && _order.PotionIngredients[index].IsReverted == _order.ReversedEffect[index])
                 {
-                    rating += 1;
+                    if (_level != EndLevel)
+                    {
+                        rating += 1;
+                    }
+
+                } else
+                {
+                    if (_level == EndLevel)
+                    {
+                        rating += 1;
+                    }
                 }
             }
 
@@ -231,7 +242,7 @@ namespace PotionsPlease.Util.Managers
 
             PlayerPrefsHandler.SetLevelStars(GameManager.Instance.LevelIndexCurrent, _ratingTotal);
 
-            bool isLevelDone = _isTutorial || _level.GetLevelDoneByRating(_ratingTotal);
+            bool isLevelDone = _isTutorial || _level.GetLevelDoneByRating(_ratingTotal, _level == EndLevel);
 
             if (isLevelDone)
                 PlayerPrefsHandler.LastLevelIndex = GameManager.Instance.LevelIndexCurrent + 1;
@@ -243,7 +254,7 @@ namespace PotionsPlease.Util.Managers
             if (_isTutorial)
                 MenuManager.Instance.ShowSummaryPanelAnim(_ratingTotal, 3, true);
             else
-                MenuManager.Instance.ShowSummaryPanelAnim(_ratingTotal, _level.RatingMax, _level.GetLevelDoneByRating(_ratingTotal));
+                MenuManager.Instance.ShowSummaryPanelAnim(_ratingTotal, _level.RatingMax, _level.GetLevelDoneByRating(_ratingTotal, _level==EndLevel));
         }
 
 
