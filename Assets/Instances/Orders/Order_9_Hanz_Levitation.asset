@@ -25,6 +25,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4337daac1781f2a49b7b395b02a8a0d3, type: 2}
   - {fileID: 11400000, guid: 6eb72117538f2cc4099e32dcb3e30f51, type: 2}
   - {fileID: 11400000, guid: 33305d0832fa7bb4d8dd5f220f05d512, type: 2}
+  - {fileID: 11400000, guid: 39c68ab325369ad4fbafe0520de33f04, type: 2}
+  - {fileID: 11400000, guid: 597e6ed500ce5bb4aa197067ddd361de, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - "I am bored without talking to people, so I need something new and exciting.

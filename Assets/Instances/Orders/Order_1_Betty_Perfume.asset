@@ -19,7 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
   - {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
   - {fileID: 11400000, guid: 3cfbfbda38f869141899cb820ee8f9d9, type: 2}
-  <BannedIngredients>k__BackingField: []
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: bcfbd822eff80aa419b43e28ab2aa5d3, type: 2}
+  - {fileID: 11400000, guid: b046fd62de0b9b941928a4aa2aac467c, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - The tavern smells rank after last night.

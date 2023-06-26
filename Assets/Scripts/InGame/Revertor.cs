@@ -25,6 +25,7 @@ namespace PotionsPlease.InGame
         {
             RevertorCollider = GetComponent<Collider2D>();
             RevertorRigidbody = GetComponent<Rigidbody2D>();
+            disableMe();
         }
 
 

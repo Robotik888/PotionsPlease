@@ -24,6 +24,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
   - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
   - {fileID: 11400000, guid: e0555cb0842125f4a8860371efe16096, type: 2}
+  - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
+  - {fileID: 11400000, guid: 540a5b1e73176ab4dbd7f5f351875e60, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - "I keep having this weird feeling that I need to sneeze, but I can never actually

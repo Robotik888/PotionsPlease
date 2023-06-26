@@ -19,7 +19,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 423299227f2234649a43690043575000, type: 2}
   - {fileID: 11400000, guid: f6f818a4445e96e408e85d781a9c097a, type: 2}
   - {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
-  <BannedIngredients>k__BackingField: []
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: aad6ac25aae80634abc668a687131e0e, type: 2}
+  - {fileID: 11400000, guid: cb4f6be7b0cfa32458b136c35536124f, type: 2}
+  - {fileID: 11400000, guid: 2893e796bb931144f9317061466bed75, type: 2}
+  - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - I always get busted when I'm on a mission beacuse I stomp too loud. Please make

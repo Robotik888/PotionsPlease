@@ -18,13 +18,20 @@ MonoBehaviour:
   <PotionIngredients>k__BackingField:
   - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
   - {fileID: 11400000, guid: 3366ceef36b22e048ac5a55155cbde84, type: 2}
-  - {fileID: 11400000, guid: b63c142c3c1955b428af856712bc45a9, type: 2}
+  - {fileID: 11400000, guid: 4adcb024e5bbf184899f0f3ffbc0dbc7, type: 2}
   <BannedIngredients>k__BackingField:
   - {fileID: 11400000, guid: e9cca5b04a24f0f4ab683c7da078b791, type: 2}
-  - {fileID: 11400000, guid: 4adcb024e5bbf184899f0f3ffbc0dbc7, type: 2}
   - {fileID: 11400000, guid: a378c941514505849ada94845b1ec06c, type: 2}
   - {fileID: 11400000, guid: 64925d1ef5075514681983f1799d7c5a, type: 2}
   - {fileID: 11400000, guid: 2893e796bb931144f9317061466bed75, type: 2}
+  - {fileID: 11400000, guid: 2ca520c54bbad424ebcc96226948db14, type: 2}
+  - {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
+  - {fileID: 11400000, guid: 597e6ed500ce5bb4aa197067ddd361de, type: 2}
+  - {fileID: 11400000, guid: 7d9c701bf69783746a1a00616f40254b, type: 2}
+  - {fileID: 11400000, guid: b63c142c3c1955b428af856712bc45a9, type: 2}
+  - {fileID: 11400000, guid: 59f456e1f9b6da246a8dc677cdfd551b, type: 2}
+  - {fileID: 11400000, guid: 33305d0832fa7bb4d8dd5f220f05d512, type: 2}
+  - {fileID: 11400000, guid: e41f7a50e353a6d45a360ccb8dac65c7, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - Hey! I heard you are really good now...

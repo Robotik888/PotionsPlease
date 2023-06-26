@@ -36,7 +36,7 @@ namespace PotionsPlease.InGame
 
             int prevLevelStars = PlayerPrefsHandler.GetLevelStars(_levelIndex - 1);
 
-            _button.interactable = _levelIndex == 1 ? prevLevelStars == 3 : GameManager.Instance.LevelsAll[_levelIndex - 2].GetLevelDoneByRating(prevLevelStars, _levelIndex==10);
+            _button.interactable = _levelIndex == 1 ? prevLevelStars == 3 : GameManager.Instance.LevelsAll[_levelIndex - 2].GetLevelDoneByRating(prevLevelStars, (_levelIndex-1)==10);
         }
     }
 }

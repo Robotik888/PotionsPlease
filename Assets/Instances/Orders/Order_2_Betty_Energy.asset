@@ -22,6 +22,9 @@ MonoBehaviour:
   <BannedIngredients>k__BackingField:
   - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
   - {fileID: 11400000, guid: 6eb72117538f2cc4099e32dcb3e30f51, type: 2}
+  - {fileID: 11400000, guid: 4337daac1781f2a49b7b395b02a8a0d3, type: 2}
+  - {fileID: 11400000, guid: c1350b8e3a3c07945a0215468915bccf, type: 2}
+  - {fileID: 11400000, guid: 17ded3a108f10374c9e01605fecdcca0, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - 'Whew! I didn''t expect yesterday''s shift to be that hectic. '

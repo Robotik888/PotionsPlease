@@ -19,7 +19,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f22e14b8f5ea18a45a44c70d4551318a, type: 2}
   - {fileID: 11400000, guid: eded51fdd7ed8f1468365aef46fe36ac, type: 2}
   - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
-  <BannedIngredients>k__BackingField: []
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: f61f7bd708a863542bfb4d6719deed16, type: 2}
+  - {fileID: 11400000, guid: 540a5b1e73176ab4dbd7f5f351875e60, type: 2}
+  - {fileID: 11400000, guid: 2ca520c54bbad424ebcc96226948db14, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - Sir, I am in love with local girl, but I am afraid that she won't go out with

@@ -19,7 +19,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5d44911688216144ad9f3f4809b046f, type: 2}
   - {fileID: 11400000, guid: f735b65cfa5d101449eca53704917e4c, type: 2}
   - {fileID: 11400000, guid: db4dcee299e816f4b955fa8bbf7e33cc, type: 2}
-  <BannedIngredients>k__BackingField: []
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: aad6ac25aae80634abc668a687131e0e, type: 2}
+  - {fileID: 11400000, guid: 38ed1f3453067d6489cac4f37b8e5a20, type: 2}
+  - {fileID: 11400000, guid: 33d48ee1496c55a49ad3ad0fe9569fb1, type: 2}
+  - {fileID: 11400000, guid: c3c1cf5c831eb6c45b571285c4775cd3, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - There have been a few buzzkills in my tavern lately.

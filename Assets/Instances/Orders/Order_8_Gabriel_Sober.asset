@@ -19,7 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1a45800ecf9f0db4380614ae1d4ad5f4, type: 2}
   - {fileID: 11400000, guid: da52c48a41249ff4dbc8f0fdd8e7482b, type: 2}
   - {fileID: 11400000, guid: 5eeb4879c8fa3294e8ee52cd3f62e507, type: 2}
-  <BannedIngredients>k__BackingField: []
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: 3df474d325ef83f42b70fc833fb2d156, type: 2}
+  - {fileID: 11400000, guid: 81c2db90af885b946a0427ef955dbf43, type: 2}
   <ReversedEffect>k__BackingField: 010000
   <MessagesOrder>k__BackingField:
   - "I went overboard  **hic** on the booze last night  **hic**. Please make  **hic**

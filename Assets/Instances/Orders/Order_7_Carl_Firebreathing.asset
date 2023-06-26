@@ -21,6 +21,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1350b8e3a3c07945a0215468915bccf, type: 2}
   <BannedIngredients>k__BackingField:
   - {fileID: 11400000, guid: 2ca520c54bbad424ebcc96226948db14, type: 2}
+  - {fileID: 11400000, guid: da52c48a41249ff4dbc8f0fdd8e7482b, type: 2}
+  - {fileID: 11400000, guid: 3df474d325ef83f42b70fc833fb2d156, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - "Hi, I was wandering.... Can you make me a potion of Fire breath so I can melt

@@ -26,6 +26,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78fa1cba8d620a44a84d01a5e5ac90b9, type: 2}
   - {fileID: 11400000, guid: 5bdee1d7c293e53458703dbbf2c81c21, type: 2}
   - {fileID: 11400000, guid: 351b10baa18ab364885e582114e73b67, type: 2}
+  - {fileID: 11400000, guid: f61f7bd708a863542bfb4d6719deed16, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - The rich folks robbed me and disappeared! I don't know what to do anymore. Can

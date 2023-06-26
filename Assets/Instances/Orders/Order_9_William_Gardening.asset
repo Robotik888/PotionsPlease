@@ -24,6 +24,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 540a5b1e73176ab4dbd7f5f351875e60, type: 2}
   - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
   - {fileID: 11400000, guid: b9ff093ebfc388446862b087673125ca, type: 2}
+  - {fileID: 11400000, guid: b6ea51b5293ef6d4fb9cbe1253beaea1, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - "Hello, fella, I would like to start gardening with my new friend but I know

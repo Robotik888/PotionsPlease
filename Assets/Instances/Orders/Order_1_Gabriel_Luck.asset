@@ -19,7 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7d9c701bf69783746a1a00616f40254b, type: 2}
   - {fileID: 11400000, guid: 351b10baa18ab364885e582114e73b67, type: 2}
   - {fileID: 11400000, guid: b63c142c3c1955b428af856712bc45a9, type: 2}
-  <BannedIngredients>k__BackingField: []
+  <BannedIngredients>k__BackingField:
+  - {fileID: 11400000, guid: e6d8f85d707572741872914ccfec0e6e, type: 2}
+  - {fileID: 11400000, guid: cb4f6be7b0cfa32458b136c35536124f, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - Have you heard about that new gambling dice game?

@@ -22,10 +22,16 @@ MonoBehaviour:
   <BannedIngredients>k__BackingField:
   - {fileID: 11400000, guid: b9ff093ebfc388446862b087673125ca, type: 2}
   - {fileID: 11400000, guid: b63c142c3c1955b428af856712bc45a9, type: 2}
-  - {fileID: 11400000, guid: 3df474d325ef83f42b70fc833fb2d156, type: 2}
   - {fileID: 11400000, guid: cb4f6be7b0cfa32458b136c35536124f, type: 2}
   - {fileID: 11400000, guid: ab48915bb5cabdf4782a0bbd203038f0, type: 2}
   - {fileID: 11400000, guid: 2893e796bb931144f9317061466bed75, type: 2}
+  - {fileID: 11400000, guid: 64925d1ef5075514681983f1799d7c5a, type: 2}
+  - {fileID: 11400000, guid: 81c2db90af885b946a0427ef955dbf43, type: 2}
+  - {fileID: 11400000, guid: 0d6d736a64ee6ee44bd1e550c658dca0, type: 2}
+  - {fileID: 11400000, guid: 3366ceef36b22e048ac5a55155cbde84, type: 2}
+  - {fileID: 11400000, guid: b863986932a39404b9647e0933ecdd43, type: 2}
+  - {fileID: 11400000, guid: 0ec519beb6ef91046b8cf385f7648705, type: 2}
+  - {fileID: 11400000, guid: 540a5b1e73176ab4dbd7f5f351875e60, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - I want to play with animals, but they always run away from me. Please make me
