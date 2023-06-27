@@ -25,6 +25,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db4dcee299e816f4b955fa8bbf7e33cc, type: 2}
   - {fileID: 11400000, guid: 423299227f2234649a43690043575000, type: 2}
   - {fileID: 11400000, guid: 38ed1f3453067d6489cac4f37b8e5a20, type: 2}
+  - {fileID: 11400000, guid: 93912f29355aa8143a70499a98e6efbf, type: 2}
+  - {fileID: 11400000, guid: 78fa1cba8d620a44a84d01a5e5ac90b9, type: 2}
   <ReversedEffect>k__BackingField: 000001
   <MessagesOrder>k__BackingField:
   - "Hey, sorry, I want to make new friends, but I'm already out of touch with these

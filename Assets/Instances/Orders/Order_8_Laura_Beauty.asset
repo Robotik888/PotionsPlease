@@ -33,8 +33,8 @@ MonoBehaviour:
   <ReversedEffect>k__BackingField: 010000
   <MessagesOrder>k__BackingField:
   - 'Hello, I would like to ask, if you are able to help me?  I just met very nice
-    man and I would like to talk to him, but he is so pretty, that I am afraid he
-    will reject me. '
+    man and I would like to talk to him, but he is so pretty, that I am afraid he''s
+    gonna reject me. '
   - 'Can you make me little bit of beauty potion? '
   <MessagesGoodResponse>k__BackingField:
   - Oh god, who is the girl in the mirror? She is gorgeous! Oh right, it's me!

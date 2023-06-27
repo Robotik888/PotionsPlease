@@ -24,6 +24,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 38ed1f3453067d6489cac4f37b8e5a20, type: 2}
   - {fileID: 11400000, guid: 33d48ee1496c55a49ad3ad0fe9569fb1, type: 2}
   - {fileID: 11400000, guid: c3c1cf5c831eb6c45b571285c4775cd3, type: 2}
+  - {fileID: 11400000, guid: 1a45800ecf9f0db4380614ae1d4ad5f4, type: 2}
+  - {fileID: 11400000, guid: 597e6ed500ce5bb4aa197067ddd361de, type: 2}
   <ReversedEffect>k__BackingField: 000000
   <MessagesOrder>k__BackingField:
   - There have been a few buzzkills in my tavern lately.
