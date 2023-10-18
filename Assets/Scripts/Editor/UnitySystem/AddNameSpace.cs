@@ -4,7 +4,7 @@ using UnityEditor;
 /// <summary>
 /// Adds the corresponding namespace to the newly created script.
 /// </summary>
-public class AddNameSpace : UnityEditor.AssetModificationProcessor
+public class AddNameSpace : AssetModificationProcessor
 {
     private const string DEFAULT_NAMESPACE = "PotionsPlease";
 
@@ -16,17 +16,20 @@ public class AddNameSpace : UnityEditor.AssetModificationProcessor
         if (index < 0)
             return;
 
-        string file = path.Substring(index);
+        string fileExtesion = path.Substring(index);
 
-        if (file != ".cs" && file != ".js" && file != ".boo")
+        if (fileExtesion != ".cs")
             return;
 
         index = Application.dataPath.LastIndexOf("Assets");
         path = Application.dataPath.Substring(0, index) + path;
         
+        if (!System.IO.File.Exists(path))
+            return;
+
         string fileText = System.IO.File.ReadAllText(path);
 
-        /// File already has a namespace set (it is probably just being renamed)
+        /// File already has a namespace set (it is probably only being renamed)
         if (fileText.Contains($"namespace {DEFAULT_NAMESPACE}."))
             return;
 
